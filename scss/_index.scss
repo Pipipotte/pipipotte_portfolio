@@ -1,9 +1,28 @@
-main{
-    .pixelart{
-        display: flex;
-        height: 100%;
+.gridIndex{
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 800px auto;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+    .header{
+        grid-area: header;
         width: 100%;
-        justify-content: center;
-        align-content: center;
+    }
+    .mainIndex{
+        grid-area: main;
+        .pixelart{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-content: center;
+        }
+    }
+    footer{
+        grid-area: footer;
     }
 }

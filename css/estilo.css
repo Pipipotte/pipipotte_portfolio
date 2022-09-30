@@ -1,6 +1,66 @@
-main .pixelart {
-  display: flex;
-  height: 100%;
+body {
+  margin-left: 6%;
+  margin-right: 6%; }
+
+a {
+  text-decoration: none; }
+
+header {
+  grid-area: header;
   width: 100%;
-  justify-content: center;
-  align-content: center; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 153px;
+  align-items: center;
+  background-color: #fff098; }
+  header .navDesktop {
+    display: flex;
+    width: 40%; }
+    header .navDesktop ul {
+      padding: 0%;
+      margin: 0%;
+      display: flex;
+      list-style: none;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center; }
+      header .navDesktop ul li {
+        text-decoration-line: none;
+        font-family: Reem Kufi;
+        font-size: 18px; }
+        header .navDesktop ul li:hover {
+          background-color: white;
+          border-top: 12px solid #E5E7B3;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+          padding: 10px 25px 10px 25px; }
+        header .navDesktop ul li a {
+          color: #494949; }
+          header .navDesktop ul li a:focus {
+            font-family: Reem Kufi;
+            font-weight: 800;
+            color: #494949; }
+          header .navDesktop ul li a:active {
+            color: #494949;
+            font-weight: 800; }
+
+.gridIndex {
+  display: grid;
+  align-content: flex-start;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 800px auto;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+  .gridIndex .header {
+    grid-area: header;
+    width: 100%; }
+  .gridIndex .mainIndex {
+    grid-area: main; }
+    .gridIndex .mainIndex .pixelart {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-content: center; }
+  .gridIndex footer {
+    grid-area: footer; }
