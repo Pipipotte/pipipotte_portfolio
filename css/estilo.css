@@ -1,9 +1,32 @@
+* {
+  margin: 0%;
+  padding: 0%; }
+
 body {
   margin-left: 6%;
-  margin-right: 6%; }
+  margin-right: 6%;
+  background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.15) 0%, rgba(245, 235, 138, 0.15) 100%); }
 
 a {
   text-decoration: none; }
+
+p {
+  font-family: Reem Kufi;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #303030; }
+
+h2 {
+  font-family: Signika;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 54px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #6E61FF; }
 
 header {
   grid-area: header;
@@ -12,8 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   height: 153px;
-  align-items: center;
-  background-color: #fff098; }
+  align-items: center; }
   header .navDesktop {
     display: flex;
     width: 40%; }
@@ -26,41 +48,87 @@ header {
       justify-content: space-between;
       align-items: center; }
       header .navDesktop ul li {
+        padding-top: 5px;
         text-decoration-line: none;
         font-family: Reem Kufi;
-        font-size: 18px; }
+        font-size: 18px;
+        transition: all 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s; }
         header .navDesktop ul li:hover {
+          line-height: 20px;
           background-color: white;
           border-top: 12px solid #E5E7B3;
           border-top-right-radius: 10px;
           border-top-left-radius: 10px;
-          padding: 10px 25px 10px 25px; }
+          padding: 10px 25px 10px 25px;
+          transition: all 0.5s;
+          animation-timing-function: ease-in-out;
+          animation-duration: 0.5s; }
         header .navDesktop ul li a {
+          letter-spacing: 0.05em;
           color: #494949; }
           header .navDesktop ul li a:focus {
             font-family: Reem Kufi;
             font-weight: 800;
-            color: #494949; }
+            color: #494949;
+            align-items: center; }
           header .navDesktop ul li a:active {
             color: #494949;
             font-weight: 800; }
+
+footer {
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+  padding: 50px 0px 50px 0px;
+  border-top: 2px solid #DFDBBD; }
+  footer p {
+    font-size: 14px;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    color: #4e4e4e; }
 
 .gridIndex {
   display: grid;
   align-content: flex-start;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 800px auto;
-  grid-template-areas: "header header" "main main" "footer footer"; }
+  grid-template-areas: "header header" "pixelartIndex infoIndex" "footer footer"; }
   .gridIndex .header {
     grid-area: header;
     width: 100%; }
-  .gridIndex .mainIndex {
-    grid-area: main; }
-    .gridIndex .mainIndex .pixelart {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      justify-content: center;
-      align-content: center; }
+  .gridIndex .pixelartIndex {
+    display: flex;
+    grid-area: pixelartIndex;
+    justify-content: end;
+    align-items: center; }
+    .gridIndex .pixelartIndex .pixelartIndexPadre {
+      position: relative; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre video {
+        mix-blend-mode: darken;
+        height: 500px; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
+        position: absolute;
+        transform: scale(1);
+        transform-origin: 0% 0%; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos1 {
+        position: absolute;
+        top: 120px;
+        left: -140px;
+        transform: scale(1);
+        transform-origin: 0% 0%; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 {
+        position: absolute;
+        top: -100px;
+        left: 40px;
+        transform: scale(1);
+        transform-origin: 0% 0%; }
+  .gridIndex .infoIndex {
+    grid-area: infoIndex;
+    padding-top: 150px;
+    margin-left: 1rem; }
+    .gridIndex .infoIndex .infoIndexDesc {
+      max-width: 554px; }
   .gridIndex footer {
     grid-area: footer; }

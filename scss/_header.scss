@@ -6,7 +6,6 @@ header{
     align-items: center;
     height: 153px;
     align-items: center;
-    background-color: rgb(255, 240, 152);
     .navDesktop{
         display: flex;
         width: 40%;
@@ -19,22 +18,32 @@ header{
             justify-content: space-between;
             align-items: center;
             li{
+                padding-top: 5px;
                 text-decoration-line: none;
                 font-family: Reem Kufi;
                 font-size: 18px;
+                transition: all 0.5s;
+                animation-timing-function: ease-in-out;
+                animation-duration: 0.5s;
                 &:hover{
+                    line-height: 20px;
                     background-color: white;
                     border-top: 12px solid #E5E7B3;
                     border-top-right-radius: 10px;
                     border-top-left-radius: 10px;
                     padding: 10px 25px 10px 25px;
+                    transition: all 0.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 0.5s;
                 }
                 a{
+                    letter-spacing: 0.05em;
                     color: #494949;
                     &:focus{
                         font-family: Reem Kufi;
                         font-weight: 800;
                         color: #494949;
+                        align-items: center;
                     }
                     &:active{
                         color: #494949;
