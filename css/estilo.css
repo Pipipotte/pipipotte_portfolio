@@ -13,6 +13,13 @@
 ::-webkit-scrollbar-track {
   background: #EBE1D4; }
 
+::selection {
+  background: #FFF7B4; }
+
+p::selection {
+  background: #FFD5AE;
+  color: #000; }
+
 body {
   margin-left: 6%;
   margin-right: 6%;
@@ -153,8 +160,24 @@ footer {
     .gridIndex .pixelartIndex .pixelartIndexPadre {
       position: relative; }
       .gridIndex .pixelartIndex .pixelartIndexPadre video {
+        position: relative;
         mix-blend-mode: darken;
-        height: 500px; }
+        height: 500px;
+        animation-name: pixelartIndexVideo;
+        animation-timing-function: cubic-bezier(0.69, 0.01, 0.33, 1.11);
+        animation-duration: 2s; }
+
+@keyframes pixelartIndexVideo {
+  0% {
+    left: 200px;
+    opacity: 1; }
+  25% {
+    opacity: 1; }
+  50% { }
+  75% { }
+  100% {
+    left: 0px;
+    opacity: 1; } }
       .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
         position: absolute;
         transform-origin: 0% 0%;

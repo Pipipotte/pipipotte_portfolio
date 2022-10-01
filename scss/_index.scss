@@ -20,8 +20,29 @@
         .pixelartIndexPadre{
             position: relative;
             video{
+                position: relative;
                 mix-blend-mode: darken;
                 height: 500px;
+                animation-name: pixelartIndexVideo;
+                animation-timing-function: cubic-bezier(.69,.01,.33,1.11);
+                animation-duration: 2s;
+                @keyframes pixelartIndexVideo{
+                    0%{
+                        left: 200px;
+                        opacity: 1;
+                    }
+                    25%{
+                        opacity: 1;
+                    }
+                    50%{
+                    }
+                    75%{
+                    }
+                    100%{
+                        left: 0px;
+                        opacity: 1;
+                    }
+                }
             }
             .pixelartIndexRectangle{
                 position: absolute;

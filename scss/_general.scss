@@ -17,6 +17,13 @@
 ::-webkit-scrollbar-track{
     background: #EBE1D4;
 }
+::selection{
+    background: #FFF7B4;
+}
+p::selection{
+    background: #FFD5AE;
+    color: #000;
+}
 
 body{
     margin-left: 6%;
