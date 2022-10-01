@@ -157,24 +157,278 @@ footer {
         height: 500px; }
       .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
         position: absolute;
-        transform: scale(1);
-        transform-origin: 0% 0%; }
+        transform-origin: 0% 0%;
+        animation-name: pixelartIndexRectangle;
+        animation-timing-function: cubic-bezier(0.69, 0.01, 0.33, 1.11);
+        animation-duration: 2s; }
+
+@keyframes pixelartIndexRectangle {
+  0% {
+    transform: scale(0); }
+  25% {
+    opacity: 0; }
+  50% { }
+  75% { }
+  100% {
+    transform: scale(1);
+    opacity: 1; } }
       .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos1 {
         position: absolute;
         top: 120px;
         left: -140px;
         transform: scale(1);
-        transform-origin: 0% 0%; }
+        transform-origin: 0% 0%;
+        animation-name: pixelartIndexElementos1;
+        animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+        animation-duration: 2.5s; }
+
+@keyframes pixelartIndexElementos1 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(-50px, 0px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(-50px, 0px);
+    opacity: 0; }
+  75% { }
+  100% { } }
       .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         position: absolute;
         top: -100px;
         left: 40px;
         transform: scale(1);
         transform-origin: 0% 0%; }
+        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelartElementos2Rectangle {
+          height: 6px;
+          width: 100%;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          background-color: #6E61FF;
+          animation-name: pixelartElementos2Rectangle;
+          animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+          animation-duration: 2s; }
+
+@keyframes pixelartElementos2Rectangle {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos {
+          background-color: white;
+          width: 416px;
+          height: 55px;
+          display: flex;
+          animation-name: pixelArtIndexIconos;
+          animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+          animation-duration: 2s; }
+
+@keyframes pixelArtIndexIconos {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+          .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList {
+            position: absolute;
+            top: 22px;
+            left: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            animation-name: pixelArtIndexIconosList;
+            animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+            animation-duration: 2.5s; }
+
+@keyframes pixelArtIndexIconosList {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+            .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div {
+              display: flex;
+              align-items: center; }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList1 {
+                position: absolute;
+                top: 2px;
+                left: 20px;
+                animation-name: IconsList1;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.4s; }
+
+@keyframes IconsList1 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList2 {
+                position: absolute;
+                top: 2px;
+                left: 78px;
+                animation-name: IconsList2;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.5s; }
+
+@keyframes IconsList2 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList3 {
+                position: absolute;
+                top: 2px;
+                left: 128px;
+                animation-name: IconsList3;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.6s; }
+
+@keyframes IconsList3 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList4 {
+                position: absolute;
+                top: 2px;
+                left: 188px;
+                animation-name: IconsList4;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.7s; }
+
+@keyframes IconsList4 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList5 {
+                position: absolute;
+                top: 2px;
+                left: 253px;
+                animation-name: IconsList5;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.8s; }
+
+@keyframes IconsList5 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList6 {
+                position: absolute;
+                top: 2px;
+                left: 315px;
+                animation-name: IconsList6;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 2.9s; }
+
+@keyframes IconsList6 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
+              .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 .pixelArtIndexIconos .pixelArtIndexIconosList div .IconsList7 {
+                position: absolute;
+                top: 2px;
+                left: 375px;
+                animation-name: IconsList7;
+                animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+                animation-duration: 3s; }
+
+@keyframes IconsList7 {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  25% { }
+  50% {
+    transform: scale(0.1);
+    transform: translate(0px, -20px);
+    opacity: 0; }
+  75% { }
+  100% { } }
   .gridIndex .infoIndex {
     grid-area: infoIndex;
     padding-top: 150px;
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    animation-name: infoIndex;
+    animation-timing-function: cubic-bezier(0.69, 0.01, 0.33, 1.11);
+    animation-duration: 2s; }
+
+@keyframes infoIndex {
+  0% {
+    opacity: 0;
+    transform: translate(-100px); }
+  25% {
+    opacity: 0; }
+  50% { }
+  75% { }
+  100% { } }
     .gridIndex .infoIndex .infoIndexDesc {
       max-width: 554px; }
   .gridIndex footer {
