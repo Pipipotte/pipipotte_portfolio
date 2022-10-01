@@ -2,10 +2,26 @@
     margin: 0%;
     padding: 0%;
 }
+::-webkit-scrollbar{
+    width: 16px;
+    height: 20px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(
+        to bottom,
+        #FFF7B4,
+        #FFD5AE
+    );
+    border-radius: 50px;
+}
+::-webkit-scrollbar-track{
+    background: #EBE1D4;
+}
+
 body{
     margin-left: 6%;
     margin-right: 6%;
-    background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.15) 0%, rgba(245, 235, 138, 0.15) 100%);
+    background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.17) 0%, rgba(245, 235, 138, 0.18) 100%);
 }
 a{
     text-decoration: none;

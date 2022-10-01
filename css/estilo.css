@@ -2,10 +2,21 @@
   margin: 0%;
   padding: 0%; }
 
+::-webkit-scrollbar {
+  width: 16px;
+  height: 20px; }
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #FFF7B4, #FFD5AE);
+  border-radius: 50px; }
+
+::-webkit-scrollbar-track {
+  background: #EBE1D4; }
+
 body {
   margin-left: 6%;
   margin-right: 6%;
-  background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.15) 0%, rgba(245, 235, 138, 0.15) 100%); }
+  background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.17) 0%, rgba(245, 235, 138, 0.18) 100%); }
 
 a {
   text-decoration: none; }
@@ -48,34 +59,70 @@ header {
       justify-content: space-between;
       align-items: center; }
       header .navDesktop ul li {
-        padding-top: 5px;
+        display: flex;
+        flex-direction: column;
         text-decoration-line: none;
         font-family: Reem Kufi;
         font-size: 18px;
         transition: all 0.5s;
         animation-timing-function: ease-in-out;
         animation-duration: 0.5s; }
-        header .navDesktop ul li:hover {
-          line-height: 20px;
-          background-color: white;
-          border-top: 12px solid #E5E7B3;
-          border-top-right-radius: 10px;
-          border-top-left-radius: 10px;
-          padding: 10px 25px 10px 25px;
+        header .navDesktop ul li div {
+          width: 0.1%;
+          height: 6px;
+          background-color: transparent;
+          position: relative;
+          z-index: 3;
           transition: all 0.5s;
           animation-timing-function: ease-in-out;
           animation-duration: 0.5s; }
         header .navDesktop ul li a {
+          position: relative;
+          z-index: 1;
+          line-height: 20px;
           letter-spacing: 0.05em;
-          color: #494949; }
+          padding: 6px 20px 6px 20px;
+          color: #494949;
+          transition: all 0.5s;
+          animation-timing-function: ease-in-out;
+          animation-duration: 0.5s; }
           header .navDesktop ul li a:focus {
             font-family: Reem Kufi;
             font-weight: 800;
-            color: #494949;
-            align-items: center; }
+            color: #494949; }
           header .navDesktop ul li a:active {
             color: #494949;
             font-weight: 800; }
+        header .navDesktop ul li:hover a {
+          background-color: white;
+          animation-name: hoverNavDesktopContainer;
+          animation-duration: 0.5s;
+          box-shadow: 0px 8px 27px -8px rgba(0, 0, 0, 0.1); }
+
+@keyframes hoverNavDesktopContainer {
+  0% {
+    transform: translate(0px, 0px);
+    opacity: 1; }
+  50% {
+    transform: translate(0px, 5px); }
+  100% {
+    transform: translate(0px, 0px); } }
+        header .navDesktop ul li:hover div {
+          width: 100%;
+          height: 6px;
+          background-color: #E5E7B3;
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          animation-name: hoverNavDesktop;
+          animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
+          animation-duration: 0.5s; }
+
+@keyframes hoverNavDesktop {
+  0% {
+    transform: scale(0.1);
+    transform: translate(0px, -10px);
+    opacity: 0; }
+  100% { } }
 
 footer {
   display: flex;
