@@ -2,6 +2,9 @@
   margin: 0%;
   padding: 0%; }
 
+html {
+  scroll-behavior: smooth; }
+
 ::-webkit-scrollbar {
   width: 16px;
   height: 20px; }
@@ -47,6 +50,11 @@ h2 {
   color: #6E61FF; }
 
 header {
+  position: sticky;
+  top: 0px;
+  z-index: 4;
+  background: rgba(254, 248, 244, 0.95);
+  backdrop-filter: blur(4px);
   grid-area: header;
   width: 100%;
   display: flex;
@@ -130,6 +138,8 @@ header {
     transform: translate(0px, -10px);
     opacity: 0; }
   100% { } }
+  header .logo-variant1 {
+    margin: 0px 16px 0px 16px; }
 
 footer {
   display: flex;
@@ -147,8 +157,8 @@ footer {
   display: grid;
   align-content: flex-start;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 800px auto;
-  grid-template-areas: "header header" "pixelartIndex infoIndex" "footer footer"; }
+  grid-template-rows: auto 800px 800px auto;
+  grid-template-areas: "header header" "pixelartIndex infoIndex" "sobreMi sobreMi" "footer footer"; }
   .gridIndex .header {
     grid-area: header;
     width: 100%; }
@@ -454,5 +464,9 @@ footer {
   100% { } }
     .gridIndex .infoIndex .infoIndexDesc {
       max-width: 554px; }
+  .gridIndex .sobreMi {
+    border: solid 2px red;
+    grid-area: sobreMi;
+    margin-top: 102px; }
   .gridIndex footer {
     grid-area: footer; }
