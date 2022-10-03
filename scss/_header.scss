@@ -1,4 +1,9 @@
 header{
+    position: sticky;
+    top: 0px;
+    z-index: 4;
+    background: rgba(254, 248, 244, 0.95);
+    backdrop-filter: blur(4px);
     grid-area: header;
     width: 100%;
     display: flex;
@@ -93,5 +98,8 @@ header{
                 }
             }
         }
+    }
+    .logo-variant1{
+        margin: 0px 16px 0px 16px;
     }
 }

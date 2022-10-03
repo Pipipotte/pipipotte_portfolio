@@ -2,10 +2,11 @@
     display: grid;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 800px auto;
+    grid-template-rows: auto 800px 800px auto;
     grid-template-areas: 
     "header header"
     "pixelartIndex infoIndex"
+    "sobreMi sobreMi"
     "footer footer"
     ;
     .header{
@@ -393,7 +394,13 @@
             max-width: 554px;
         }
     }
+    .sobreMi{
+        border: solid 2px red;
+        grid-area: sobreMi;
+        margin-top: 102px;
+    }
     footer{
         grid-area: footer;
     }
+    
 }
