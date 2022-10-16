@@ -397,7 +397,6 @@
         }
     }
     .indexPortfolio{
-        border: solid 2px red;
         grid-area: indexPortfolio;
         margin-top: 102px;
         .indexPortfolioTittle{
@@ -441,6 +440,9 @@
                     border-style: solid;
                     border-color: #6E61FF;
                     #carouselIndexHeracles{
+                        width: 400px;
+                    }
+                    #carouselIndexOnix{
                         width: 400px;
                     }
                 }
@@ -501,6 +503,7 @@
                             }
                         }
                     }
+                    /**************************** BOTONES ****************************/
                     .portfolioCardButton{
                         z-index: 3;
                         display: flex;
@@ -509,6 +512,7 @@
                         align-items: center;
                         gap: 16px;
                         background: #FFFFFF;
+                        /******* HERACLES antes del check *******/
                         #btnCardHeraclesAmpliar{
                             transform: translateY(-6px);
                         }
@@ -518,7 +522,18 @@
                         #btnCardHeraclesLeer{
                             display: none;
                         }
+                        /******* ONIX antes del check *******/
+                        #btnCardOnixAmpliar{
+                            transform: translateY(-6px);
+                        }
+                        #btnCardOnixReducir{
+                            display: none;
+                        }
+                        #btnCardOnixLeer{
+                            display: none;
+                        }
                     }
+                    /******* HERACLES despues del check *******/
                     #btnCardHeracles{
                         display: none;
                         &:checked{
@@ -548,6 +563,41 @@
                                     display: flex;
                                 }
                                 #btnCardHeraclesLeer{
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                    /******* ONIX despues del check *******/
+                    #btnCardOnix{
+                        display: none;
+                        &:checked{
+                            ~ .portfolioCardDesc {
+                                opacity: 1;
+                                transition: all 0.5s;
+                                animation-duration: 2s;
+                                .portfolioCardDescAtributos{
+                                    opacity: 1;
+                                    height: 90px;
+                                }
+                                .portfolioCardDescParrafo{
+                                    p{
+                                        opacity: 1;
+                                        height: 150px;
+                                    }
+                                }
+                            }
+                            .button.ampliar{
+                                background-color: #6E61FF;
+                            }
+                            ~ .portfolioCardButton {
+                                #btnCardOnixAmpliar{
+                                    display: none;
+                                }
+                                #btnCardOnixReducir{
+                                    display: flex;
+                                }
+                                #btnCardOnixLeer{
                                     display: flex;
                                 }
                             }

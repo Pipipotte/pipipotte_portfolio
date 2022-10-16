@@ -496,7 +496,6 @@ footer {
       max-width: 554px;
       min-width: 330px; }
   .gridIndex .indexPortfolio {
-    border: solid 2px red;
     grid-area: indexPortfolio;
     margin-top: 102px; }
     .gridIndex .indexPortfolio .indexPortfolioTittle {
@@ -537,6 +536,8 @@ footer {
           border-color: #6E61FF; }
           .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexHeracles {
             width: 400px; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexOnix {
+            width: 400px; }
         .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox {
           display: flex;
           flex-direction: column-reverse;
@@ -544,7 +545,10 @@ footer {
           padding: 20px 40px 20px 40px;
           border-width: 0px 3px 3px 3px;
           border-style: solid;
-          border-color: #6E61FF; }
+          border-color: #6E61FF;
+          /**************************** BOTONES ****************************/
+          /******* HERACLES despues del check *******/
+          /******* ONIX despues del check *******/ }
           .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc {
             z-index: 2;
             display: flex;
@@ -594,12 +598,20 @@ footer {
             justify-content: center;
             align-items: center;
             gap: 16px;
-            background: #FFFFFF; }
+            background: #FFFFFF;
+            /******* HERACLES antes del check *******/
+            /******* ONIX antes del check *******/ }
             .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardHeraclesAmpliar {
               transform: translateY(-6px); }
             .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardHeraclesReducir {
               display: none; }
             .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardHeraclesLeer {
+              display: none; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardOnixAmpliar {
+              transform: translateY(-6px); }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardOnixReducir {
+              display: none; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton #btnCardOnixLeer {
               display: none; }
           .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardHeracles {
             display: none; }
@@ -620,6 +632,26 @@ footer {
             .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardHeracles:checked ~ .portfolioCardButton #btnCardHeraclesReducir {
               display: flex; }
             .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardHeracles:checked ~ .portfolioCardButton #btnCardHeraclesLeer {
+              display: flex; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix {
+            display: none; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardDesc {
+              opacity: 1;
+              transition: all 0.5s;
+              animation-duration: 2s; }
+              .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardDesc .portfolioCardDescAtributos {
+                opacity: 1;
+                height: 90px; }
+              .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardDesc .portfolioCardDescParrafo p {
+                opacity: 1;
+                height: 150px; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked .button.ampliar {
+              background-color: #6E61FF; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardButton #btnCardOnixAmpliar {
+              display: none; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardButton #btnCardOnixReducir {
+              display: flex; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox #btnCardOnix:checked ~ .portfolioCardButton #btnCardOnixLeer {
               display: flex; }
         .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardSliders {
           display: flex;
