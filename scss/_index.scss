@@ -2,11 +2,11 @@
     display: grid;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 800px 800px auto;
+    grid-template-rows: auto 800px 1200px auto;
     grid-template-areas: 
     "header header"
     "pixelartIndex infoIndex"
-    "sobreMi sobreMi"
+    "indexPortfolio indexPortfolio"
     "footer footer"
     ;
     .header{
@@ -15,6 +15,7 @@
     }
     .pixelartIndex{
         display: flex;
+        min-width: 650px;
         grid-area: pixelartIndex;
         justify-content: end;
         align-items: center;
@@ -189,7 +190,7 @@
                             align-items: center;
                             .IconsList1{
                                 position: absolute;
-                                top: 2px; left: 20px;
+                                top: 0px; left: 18px;
                                 animation-name: IconsList1;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.4s;
@@ -214,7 +215,7 @@
                             }
                             .IconsList2{
                                 position: absolute;
-                                top: 2px; left: 78px;
+                                top: 0px; left: 74px;
                                 animation-name: IconsList2;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.5s;
@@ -239,7 +240,7 @@
                             }
                             .IconsList3{
                                 position: absolute;
-                                top: 2px; left: 128px;
+                                top: 0px; left: 124px;
                                 animation-name: IconsList3;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.6s;
@@ -264,7 +265,7 @@
                             }
                             .IconsList4{
                                 position: absolute;
-                                top: 2px; left: 188px;
+                                top: 0px; left: 184px;
                                 animation-name: IconsList4;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.7s;
@@ -289,7 +290,7 @@
                             }
                             .IconsList5{
                                 position: absolute;
-                                top: 2px; left: 253px;
+                                top: 0px; left: 251px;
                                 animation-name: IconsList5;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.8s;
@@ -314,7 +315,7 @@
                             }
                             .IconsList6{
                                 position: absolute;
-                                top: 2px; left: 315px;
+                                top: 0px; left: 313px;
                                 animation-name: IconsList6;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 2.9s;
@@ -339,7 +340,7 @@
                             }
                             .IconsList7{
                                 position: absolute;
-                                top: 2px; left: 375px;
+                                top: 0px; left: 373px;
                                 animation-name: IconsList7;
                                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                                 animation-duration: 3s;
@@ -392,12 +393,187 @@
         }
         .infoIndexDesc{
             max-width: 554px;
+            min-width: 330px;
         }
     }
-    .sobreMi{
+    .indexPortfolio{
         border: solid 2px red;
-        grid-area: sobreMi;
+        grid-area: indexPortfolio;
         margin-top: 102px;
+        .indexPortfolioTittle{
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            div{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        .indexPortfolioPrimerFila{
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+            margin: 50px 0px 50px 0px;
+            .portfolioCard{
+                height: fit-content;
+                max-width: 552px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                box-shadow: 14px 11px 0px 0px #6E61FF;
+                font-size: 18px;
+                .portfolioCardImages{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 40px 0px 0px 0px;
+                    gap: 10px;
+                    width: 100%;
+                    height: fit-content;
+                    background: #FFFFFF;
+                    border-width: 3px 3px 0px 3px;
+                    border-style: solid;
+                    border-color: #6E61FF;
+                    #carouselIndexHeracles{
+                        width: 400px;
+                    }
+                }
+                .portfolioCardBox{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    width: 100%;
+                    padding: 20px 40px 20px 40px;
+                    border-width: 0px 3px 3px 3px;
+                    border-style: solid;
+                    border-color: #6E61FF;
+                    .portfolioCardDesc{
+                        z-index: 2;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        gap: 10px;
+                        width: 100%;
+                        height: 100%;
+                        background: #FFFFFF;
+                        overflow: hidden;
+                        .portfolioCardDescAtributos{
+                            opacity: 0;
+                            height: 0px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: 0px;
+                            gap: 8px;
+                            transition: all 0.5s;
+                            animation-duration: 1s;
+                            .portfolioCardDescAtributos1{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 4px 10px;
+                                gap: 10px;
+                                background: #FFFDEB;
+                            }
+                            .portfolioCardDescAtributos2{
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 6px 10px;
+                                gap: 10px;
+                                background: #FFFDEB;
+                            }
+                        }
+                        .portfolioCardDescParrafo{
+                            p{
+                                opacity: 0;
+                                height: 0px;
+                                transition: all 0.5s;
+                                animation-duration: 1s;
+                            }
+                        }
+                    }
+                    .portfolioCardButton{
+                        z-index: 3;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 16px;
+                        background: #FFFFFF;
+                        #btnCardHeraclesAmpliar{
+                            transform: translateY(-6px);
+                        }
+                        #btnCardHeraclesReducir{
+                            display: none;
+                        }
+                        #btnCardHeraclesLeer{
+                            display: none;
+                        }
+                    }
+                    #btnCardHeracles{
+                        display: none;
+                        &:checked{
+                            ~ .portfolioCardDesc {
+                                opacity: 1;
+                                transition: all 0.5s;
+                                animation-duration: 2s;
+                                .portfolioCardDescAtributos{
+                                    opacity: 1;
+                                    height: 90px;
+                                }
+                                .portfolioCardDescParrafo{
+                                    p{
+                                        opacity: 1;
+                                        height: 150px;
+                                    }
+                                }
+                            }
+                            .button.ampliar{
+                                background-color: #6E61FF;
+                            }
+                            ~ .portfolioCardButton {
+                                #btnCardHeraclesAmpliar{
+                                    display: none;
+                                }
+                                #btnCardHeraclesReducir{
+                                    display: flex;
+                                }
+                                #btnCardHeraclesLeer{
+                                    display: flex;
+                                }
+                            }
+                        }
+                    }
+                }
+                .portfolioCardSliders{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px 10px;
+                    gap: 10px;
+                    width: 100%;
+                    height: 56px;
+                    background: #FFFFFF;
+                    border-width: 0px 3px 3px 3px;
+                    border-style: solid;
+                    border-color: #6E61FF;
+                    button{
+                        position: static;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
     }
     footer{
         grid-area: footer;
