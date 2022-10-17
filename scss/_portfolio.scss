@@ -1,0 +1,30 @@
+.gridPortfolio{
+    display: grid;
+    align-content: flex-start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 800px auto;
+    grid-template-areas: 
+    "header header"
+    "bodyPortfolio bodyPortfolio"
+    "footer footer"
+    ;
+    .header{
+        grid-area: header;
+        width: 100%;
+    }
+    .bodyPortfolio{
+        grid-area: bodyPortfolio;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        video{
+            width: 100%;
+            height: 600px;
+            mix-blend-mode: darken;
+        }
+    }
+    .footer{
+        grid-area: footer;
+        width: 100%;
+    }
+}

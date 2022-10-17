@@ -82,3 +82,20 @@ h4{
     gap: 10px;
     background: #FFFDEB;
 }
+.buttonBGw{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 16px;
+    gap: 10px;
+    background: white;
+    box-shadow: 0px 0px 0px 0px #6E61FF00;
+    transition: all 0.5s;
+    animation-duration: 1s;
+    &:hover{
+        box-shadow: 6.197530746459961px 6.197530746459961px 0px 0px #6E61FF;
+        transition: all 0.5s;
+        animation-duration: 1s;
+    }
+}
