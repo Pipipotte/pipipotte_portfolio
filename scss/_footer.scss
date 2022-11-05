@@ -1,10 +1,26 @@
 footer{
     display: flex;
+    flex-direction: column;
     grid-area: footer;
     justify-content: center;
     padding: 50px 0px 50px 0px;
     border-top: 2px solid #DFDBBD;
+    gap: 12px;
+    .footerRedes{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        a{
+            transition: all 0.5s;
+            animation-duration: 1s;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
     p{
+        display: flex;
+        justify-content: center;
         font-size: 14px;
         font-family: 'Karla', sans-serif;
         font-weight: 400;

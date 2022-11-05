@@ -220,11 +220,24 @@ header {
 
 footer {
   display: flex;
+  flex-direction: column;
   grid-area: footer;
   justify-content: center;
   padding: 50px 0px 50px 0px;
-  border-top: 2px solid #DFDBBD; }
+  border-top: 2px solid #DFDBBD;
+  gap: 12px; }
+  footer .footerRedes {
+    display: flex;
+    justify-content: center;
+    gap: 16px; }
+    footer .footerRedes a {
+      transition: all 0.5s;
+      animation-duration: 1s; }
+      footer .footerRedes a:hover {
+        transform: scale(1.2); }
   footer p {
+    display: flex;
+    justify-content: center;
     font-size: 14px;
     font-family: 'Karla', sans-serif;
     font-weight: 400;
@@ -813,6 +826,20 @@ footer {
       justify-content: center;
       gap: 3rem;
       margin-top: 50px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto .indexSobreMiRowColRedes {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+          gap: 16px; }
+          .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto .indexSobreMiRowColRedes a {
+            transition: all 0.5s;
+            animation-duration: 1s; }
+            .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto .indexSobreMiRowColRedes a:hover {
+              transform: scale(1.2); }
       .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColDesc {
         max-width: 420px; }
       .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras {
@@ -821,6 +848,10 @@ footer {
         display: flex;
         flex-direction: column;
         gap: 16px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras .indexSobreMiRowColExtrasDiv {
+          display: flex;
+          flex-direction: column;
+          gap: 6px; }
   .gridIndex .indexContacto {
     grid-area: indexContacto;
     padding: 50px 0px; }

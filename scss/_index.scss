@@ -757,6 +757,24 @@
             justify-content: center;
             gap: 3rem;
             margin-top: 50px;
+            .indexSobreMiRowColFoto{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .indexSobreMiRowColRedes{
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                    gap: 16px;
+                    a{
+                        transition: all 0.5s;
+                        animation-duration: 1s;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
             .indexSobreMiRowColDesc{
                 max-width: 420px;
             }
@@ -766,6 +784,11 @@
                 display: flex;
                 flex-direction: column;
                 gap: 16px;
+                .indexSobreMiRowColExtrasDiv{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
             }
         }
     }
