@@ -26,7 +26,7 @@ p::selection {
 body {
   margin-left: 6%;
   margin-right: 6%;
-  background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.17) 0%, rgba(245, 235, 138, 0.18) 100%); }
+  background-color: #FEF8F5; }
 
 a {
   text-decoration: none; }
@@ -43,7 +43,7 @@ p {
 
 h2 {
   font-family: Signika;
-  font-size: 37px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 54px;
   letter-spacing: 0em;
@@ -64,9 +64,41 @@ h4 {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0em;
-  text-align: left;
   color: #303030;
   margin: 0; }
+
+h5 {
+  font-family: 'Reem Kufi';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 18px;
+  color: #494949;
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: 0.05em; }
+
+.h5 {
+  display: flex;
+  flex-direction: row;
+  font-weight: 700;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 10px;
+  width: fit-content;
+  height: fit-content;
+  background: #FFFDEB;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+h6 {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 0;
+  margin-bottom: 0; }
 
 .button {
   display: flex;
@@ -202,8 +234,8 @@ footer {
   display: grid;
   align-content: flex-start;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 800px 1200px auto;
-  grid-template-areas: "header header" "pixelartIndex infoIndex" "indexPortfolio indexPortfolio" "footer footer"; }
+  grid-template-rows: auto 800px 1200px 800px 800px 800px auto;
+  grid-template-areas: "header header" "pixelartIndex infoIndex" "indexPortfolio indexPortfolio" "indexHabilidades indexHabilidades" "indexSobreMi indexSobreMi" "indexContacto indexContacto" "footer footer"; }
   .gridIndex .header {
     grid-area: header;
     width: 100%; }
@@ -509,6 +541,7 @@ footer {
   75% { }
   100% { } }
     .gridIndex .infoIndex .infoIndexDesc {
+      margin: 6px 0px 6px 0px;
       max-width: 554px;
       min-width: 330px; }
   .gridIndex .indexPortfolio {
@@ -686,8 +719,210 @@ footer {
             position: static;
             opacity: 1; }
     .gridIndex .indexPortfolio .indexPortfolioMasTrabajos {
+      margin-top: 120px;
       display: flex;
       justify-content: center; }
+      .gridIndex .indexPortfolio .indexPortfolioMasTrabajos .buttonBGw {
+        pad: 50px, 0px, 50px, 0px; }
+        .gridIndex .indexPortfolio .indexPortfolioMasTrabajos .buttonBGw p {
+          font-size: 24px;
+          line-height: 24px; }
+  .gridIndex .indexHabilidades {
+    grid-area: indexHabilidades;
+    padding: 50px 0px; }
+    .gridIndex .indexHabilidades .indexHabilidadesTittle {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 10px; }
+      .gridIndex .indexHabilidades .indexHabilidadesTittle div img {
+        width: 42px;
+        height: 42px; }
+    .gridIndex .indexHabilidades .indexHabilidadesDesc {
+      height: auto;
+      margin: 20px 0px 20px 0px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center; }
+      .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid {
+        margin: 20px 0px 20px 0px;
+        width: 90%;
+        display: grid;
+        justify-content: center;
+        gap: 2rem 6rem;
+        grid-template-columns: 286px 286px 286px;
+        grid-template-rows: 142px 142px;
+        grid-template-areas: "branding uxui motionsgraphics" "frontend fotografia modelado3d"; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .indexHabilidadesDescContainer {
+          display: flex;
+          flex-direction: column; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerBranding {
+          grid-area: branding; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerUxui {
+          grid-area: uxui; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerMotionsgraphics {
+          grid-area: motionsgraphics; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerFrontend {
+          grid-area: frontend; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerFotografia {
+          grid-area: fotografia; }
+        .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid .containerModelado3d {
+          grid-area: modelado3d; }
+    .gridIndex .indexHabilidades .indexHabilidadesRecursos div {
+      padding: 10px 10px;
+      display: flex;
+      justify-content: center; }
+      .gridIndex .indexHabilidades .indexHabilidadesRecursos div div {
+        padding: 10px 50px;
+        display: flex;
+        flex-direction: column-reverse;
+        text-align: center;
+        overflow: hidden; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div div img {
+          width: 72px;
+          height: 72px; }
+      .gridIndex .indexHabilidades .indexHabilidadesRecursos div h4 {
+        transition: all 0.5s;
+        animation-duration: 1s;
+        transform: translateY(16px);
+        opacity: 0;
+        animation-timing-function: cubic-bezier(0.58, -0.27, 0.48, 1.21); }
+      .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills {
+        background: #FFFDEB;
+        box-shadow: 0px 0px 0px 0px #6E61FF00;
+        transition: all 0.5s;
+        animation-duration: 1s; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover {
+          box-shadow: 5.93797px 5.93797px 0px #6E61FF; }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover ~ h4 {
+            opacity: 1;
+            transform: translateY(-8px); }
+  .gridIndex .indexSobreMi {
+    grid-area: indexSobreMi;
+    padding: 50px 0px; }
+    .gridIndex .indexSobreMi .indexSobreMiTittle {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 10px; }
+      .gridIndex .indexSobreMi .indexSobreMiTittle div img {
+        width: 42px;
+        height: 42px; }
+    .gridIndex .indexSobreMi .indexSobreMiRow {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 50px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColDesc {
+        max-width: 420px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras {
+        max-width: 350px;
+        min-width: 250px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px; }
+  .gridIndex .indexContacto {
+    grid-area: indexContacto;
+    padding: 50px 0px; }
+    .gridIndex .indexContacto .indexContactoTittle {
+      height: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 10px; }
+      .gridIndex .indexContacto .indexContactoTittle div img {
+        width: 42px;
+        height: 42px; }
+    .gridIndex .indexContacto .indexContactoForm {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .gridIndex .indexContacto .indexContactoForm .indexContactoContainer {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; }
+      .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%; }
+        .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs {
+          width: 520px; }
+          .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form {
+            display: flex;
+            flex-direction: column;
+            gap: 32px; }
+            .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsNombre {
+              display: flex;
+              flex-direction: column; }
+              .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsNombre input {
+                background-color: #FFFDEB;
+                border: 0px;
+                width: 100%;
+                height: 36px;
+                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                transition: all 0.5s;
+                animation-duration: 1s;
+                padding: 0px 10px;
+                font-family: Karla;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px; }
+                .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsNombre input:focus {
+                  outline: none;
+                  box-shadow: 4px 4px 0px 0px #6E61FF; }
+            .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsEmail {
+              display: flex;
+              flex-direction: column; }
+              .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsEmail input {
+                background-color: #FFFDEB;
+                border: 0px;
+                width: 100%;
+                height: 36px;
+                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                transition: all 0.5s;
+                animation-duration: 1s;
+                padding: 0px 10px;
+                font-family: Karla;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px; }
+                .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsEmail input:focus {
+                  outline: none;
+                  box-shadow: 4px 4px 0px 0px #6E61FF; }
+            .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsDesc {
+              display: flex;
+              flex-direction: column; }
+              .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsDesc textarea {
+                background-color: #FFFDEB;
+                border: 0px;
+                width: 100%;
+                height: 100px;
+                resize: none;
+                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                transition: all 0.5s;
+                animation-duration: 1s;
+                padding: 10px;
+                font-family: Karla;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 24px; }
+                .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs form .indexContactoFormInputsDesc textarea:focus {
+                  outline: none;
+                  box-shadow: 4px 4px 0px 0px #6E61FF; }
+          .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs .indexContactoFormInputsBtn {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center; }
+            .gridIndex .indexContacto .indexContactoForm .indexContactoFormInputContainer .indexContactoFormInputs .indexContactoFormInputsBtn .buttonBGw {
+              border-color: transparent; }
   .gridIndex footer {
     grid-area: footer; }
 

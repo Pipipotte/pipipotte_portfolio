@@ -31,7 +31,7 @@ p::selection{
 body{
     margin-left: 6%;
     margin-right: 6%;
-    background: linear-gradient(153.46deg, rgba(250, 207, 226, 0.17) 0%, rgba(245, 235, 138, 0.18) 100%);
+    background-color: #FEF8F5;
 }
 a{
     text-decoration: none;
@@ -48,7 +48,7 @@ p{
 }
 h2{
     font-family: Signika;
-    font-size: 37px;
+    font-size: 36px;
     font-weight: 700;
     line-height: 54px;
     letter-spacing: 0em;
@@ -69,9 +69,41 @@ h4{
     font-weight: 400;
     line-height: 24px;
     letter-spacing: 0em;
-    text-align: left;
     color: #303030;
     margin: 0;
+}
+h5{
+    font-family: 'Reem Kufi';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+    color: #494949;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: 0.05em;
+}
+.h5{
+    display: flex;
+    flex-direction: row;
+    font-weight: 700;
+    justify-content: center;
+    align-items: center;
+    padding: 6px 10px;
+    width: fit-content;
+    height: fit-content;
+    background: #FFFDEB;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+h6{
+    font-family: 'Karla';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 .button{
     display: flex;

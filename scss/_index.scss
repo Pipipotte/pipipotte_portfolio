@@ -2,11 +2,14 @@
     display: grid;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 800px 1200px auto;
+    grid-template-rows: auto 800px 1200px 800px 800px 800px auto;
     grid-template-areas: 
     "header header"
     "pixelartIndex infoIndex"
     "indexPortfolio indexPortfolio"
+    "indexHabilidades indexHabilidades"
+    "indexSobreMi indexSobreMi"
+    "indexContacto indexContacto"
     "footer footer"
     ;
     .header{
@@ -392,6 +395,7 @@
             }
         }
         .infoIndexDesc{
+            margin: 6px 0px 6px 0px;
             max-width: 554px;
             min-width: 330px;
         }
@@ -625,8 +629,268 @@
             }
         }
         .indexPortfolioMasTrabajos{
+            margin-top: 120px;
             display: flex;
             justify-content: center;
+            .buttonBGw{
+                pad: 50px, 0px, 50px, 0px;
+                p{
+                    font-size: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+    .indexHabilidades{
+        grid-area: indexHabilidades;
+        padding: 50px 0px;
+        .indexHabilidadesTittle{
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            div{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        .indexHabilidadesDesc{
+            height: auto;
+            margin: 20px 0px 20px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            .indexHabilidadesDescGrid{
+                margin: 20px 0px 20px 0px;
+                width: 90%;
+                display: grid;
+                justify-content: center;
+                gap: 2rem 6rem;
+                grid-template-columns: 286px 286px 286px;
+                grid-template-rows: 142px 142px;
+                grid-template-areas: 
+                "branding uxui motionsgraphics"
+                "frontend fotografia modelado3d"
+                ;
+                .indexHabilidadesDescContainer{
+                    display: flex;
+                    flex-direction: column;
+                }
+                .containerBranding{
+                    grid-area: branding;
+                }
+                .containerUxui{
+                    grid-area: uxui;
+                }
+                .containerMotionsgraphics{
+                    grid-area: motionsgraphics;
+                }
+                .containerFrontend{
+                    grid-area: frontend;
+                }
+                .containerFotografia{
+                    grid-area: fotografia;
+                }
+                .containerModelado3d{
+                    grid-area: modelado3d;
+                }
+            }
+        }
+        .indexHabilidadesRecursos{
+            div{
+                padding: 10px 10px;
+                display: flex;
+                justify-content: center;
+                div{
+                    padding: 10px 50px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    text-align: center;
+                    overflow: hidden;
+                    img{
+                        width: 72px;
+                        height: 72px;
+                    }
+                }
+                h4{
+                    transition: all 0.5s;
+                    animation-duration: 1s;
+                    transform: translateY(16px);
+                    opacity: 0;
+                    animation-timing-function: cubic-bezier(.58,-0.27,.48,1.21);
+                }
+                .iconSkills{
+                    background: #FFFDEB;
+                    box-shadow: 0px 0px 0px 0px #6E61FF00;
+                    transition: all 0.5s;
+                    animation-duration: 1s;
+                    &:hover{
+                        box-shadow: 5.93797px 5.93797px 0px #6E61FF;
+                        &~h4{
+                            opacity: 1;
+                            transform: translateY(-8px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .indexSobreMi{
+        grid-area: indexSobreMi;
+        padding: 50px 0px;
+        .indexSobreMiTittle{
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            div{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        .indexSobreMiRow{
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 50px;
+            .indexSobreMiRowColDesc{
+                max-width: 420px;
+            }
+            .indexSobreMiRowColExtras{
+                max-width: 350px;
+                min-width: 250px;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    }
+    .indexContacto{
+        grid-area: indexContacto;
+        padding: 50px 0px;
+        .indexContactoTittle{
+            height: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            div{
+                img{
+                    width: 42px;
+                    height: 42px;
+                }
+            }
+        }
+        .indexContactoForm{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .indexContactoContainer{
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 100px;
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 100%;
+            }
+            .indexContactoFormInputContainer{
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                top: 150px;
+                margin-left: auto; 
+                margin-right: auto; 
+                width: 100%;
+                .indexContactoFormInputs{
+                    width: 520px;
+                    form{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 32px;
+                        .indexContactoFormInputsNombre{
+                            display: flex;
+                            flex-direction: column;
+                            input{
+                                background-color: #FFFDEB;
+                                border: 0px;
+                                width: 100%;
+                                height: 36px;
+                                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                                transition: all 0.5s;
+                                animation-duration: 1s;
+                                padding: 0px 10px;
+                                font-family: Karla;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                }
+                            }
+                        }
+                        .indexContactoFormInputsEmail{
+                            display: flex;
+                            flex-direction: column;
+                            input{
+                                background-color: #FFFDEB;
+                                border: 0px;
+                                width: 100%;
+                                height: 36px;
+                                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                                transition: all 0.5s;
+                                animation-duration: 1s;
+                                padding: 0px 10px;
+                                font-family: Karla;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                }
+                            }
+                        }
+                        .indexContactoFormInputsDesc{
+                            display: flex;
+                            flex-direction: column;
+                            textarea{
+                                background-color: #FFFDEB;
+                                border: 0px;
+                                width: 100%;
+                                height: 100px;
+                                resize: none;
+                                box-shadow: 0px 0px 0px 0px #6E61FF00;
+                                transition: all 0.5s;
+                                animation-duration: 1s;
+                                padding: 10px;
+                                font-family: Karla;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 24px;
+                                &:focus{
+                                    outline: none;
+                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                }
+                            }
+                        }
+                    }
+                    .indexContactoFormInputsBtn{
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: center;
+                        .buttonBGw{
+                            border-color: transparent;
+                        }
+                    }
+                }
+            }
+            
         }
     }
     footer{
