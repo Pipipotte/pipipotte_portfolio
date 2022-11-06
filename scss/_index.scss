@@ -376,9 +376,9 @@
         grid-area: infoIndex;
         padding-top: 150px;
         margin-left: 1rem;
-        animation-name: infoIndex;
         animation-timing-function: cubic-bezier(.69,.01,.33,1.11);
         animation-duration: 2s;
+        animation-name: infoIndex;
         @keyframes infoIndex{
             0%{
                 opacity: 0;
@@ -851,9 +851,87 @@
                                 font-size: 18px;
                                 font-weight: 400;
                                 line-height: 24px;
+                                &:valid:focus{
+                                    background-color: #FFFDEB;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanValid{
+                                            background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                            width: 100%;
+                                            opacity: 0;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValid;
+                                            @keyframes formSpanValid{
+                                                0%{
+                                                    opacity: 1;
+                                                }
+                                                75%{
+                                                    opacity: 0;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 0;
+                                                }
+                                            }
+                                        }
+                                        .indexContactoFormSpanValidSolid{
+                                            width: 100%;
+                                            opacity: 1;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValidSolid;
+                                            @keyframes formSpanValidSolid{
+                                                0%{
+                                                    opacity: 0;
+                                                }
+                                                75%{
+                                                    opacity: 1;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 &:focus{
                                     outline: none;
-                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanFocus{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            .indexContactoFormSpan{
+                                position: relative;
+                                .indexContactoFormSpanFocus{
+                                    position: absolute;
+                                    background-color: #6E61FF;
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValid{
+                                    position: absolute;
+                                    background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValidSolid{
+                                    position: absolute;
+                                    background: #40E39F;
+                                    height: 5px;
+                                    width: 0%;
+                                    opacity: 0;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
                                 }
                             }
                         }
@@ -873,9 +951,87 @@
                                 font-size: 18px;
                                 font-weight: 400;
                                 line-height: 24px;
+                                &:valid:focus{
+                                    background-color: #FFFDEB;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanValid{
+                                            background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                            width: 100%;
+                                            opacity: 0;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValid;
+                                            @keyframes formSpanValid{
+                                                0%{
+                                                    opacity: 1;
+                                                }
+                                                75%{
+                                                    opacity: 0;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 0;
+                                                }
+                                            }
+                                        }
+                                        .indexContactoFormSpanValidSolid{
+                                            width: 100%;
+                                            opacity: 1;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValidSolid;
+                                            @keyframes formSpanValidSolid{
+                                                0%{
+                                                    opacity: 0;
+                                                }
+                                                75%{
+                                                    opacity: 1;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 &:focus{
                                     outline: none;
-                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanFocus{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            .indexContactoFormSpan{
+                                position: relative;
+                                .indexContactoFormSpanFocus{
+                                    position: absolute;
+                                    background-color: #6E61FF;
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValid{
+                                    position: absolute;
+                                    background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValidSolid{
+                                    position: absolute;
+                                    background: #40E39F;
+                                    height: 5px;
+                                    width: 0%;
+                                    opacity: 0;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
                                 }
                             }
                         }
@@ -896,9 +1052,87 @@
                                 font-size: 18px;
                                 font-weight: 400;
                                 line-height: 24px;
+                                &:valid:focus{
+                                    background-color: #FFFDEB;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanValid{
+                                            background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                            width: 100%;
+                                            opacity: 0;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValid;
+                                            @keyframes formSpanValid{
+                                                0%{
+                                                    opacity: 1;
+                                                }
+                                                75%{
+                                                    opacity: 0;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 0;
+                                                }
+                                            }
+                                        }
+                                        .indexContactoFormSpanValidSolid{
+                                            width: 100%;
+                                            opacity: 1;
+                                            animation-timing-function: ease-in-out;
+                                            transition: all 0.5s;
+                                            animation-duration: 1s;
+                                            animation-name: formSpanValidSolid;
+                                            @keyframes formSpanValidSolid{
+                                                0%{
+                                                    opacity: 0;
+                                                }
+                                                75%{
+                                                    opacity: 1;
+                                                }
+                                                
+                                                100%{
+                                                    opacity: 1;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 &:focus{
                                     outline: none;
-                                    box-shadow: 4px 4px 0px 0px #6E61FF;
+                                    ~.indexContactoFormSpan{
+                                        .indexContactoFormSpanFocus{
+                                            width: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                            .indexContactoFormSpan{
+                                position: relative;
+                                .indexContactoFormSpanFocus{
+                                    position: absolute;
+                                    background-color: #6E61FF;
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValid{
+                                    position: absolute;
+                                    background: linear-gradient(90deg, rgba(64,227,159,1) 75%, rgba(110,97,255,1) 100%);
+                                    height: 5px;
+                                    width: 0%;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
+                                }
+                                .indexContactoFormSpanValidSolid{
+                                    position: absolute;
+                                    background: #40E39F;
+                                    height: 5px;
+                                    width: 0%;
+                                    opacity: 0;
+                                    transition: all 0.5s;
+                                    animation-duration: 1s;
                                 }
                             }
                         }
