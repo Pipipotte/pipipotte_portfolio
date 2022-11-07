@@ -32,7 +32,9 @@ p::selection{
 body{
     margin-left: 6%;
     margin-right: 6%;
-    background-color: #FEF8F5;
+    background-image: url(../media/Background.jpg);
+    background-repeat: repeat;
+    background-color: #FEF8F5
 }
 a{
     text-decoration: none;

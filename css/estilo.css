@@ -27,6 +27,8 @@ p::selection {
 body {
   margin-left: 6%;
   margin-right: 6%;
+  background-image: url(../media/Background.jpg);
+  background-repeat: repeat;
   background-color: #FEF8F5; }
 
 a {
@@ -572,7 +574,8 @@ footer {
     .gridIndex .indexPortfolio .indexPortfolioPrimerFila {
       display: flex;
       width: 100%;
-      justify-content: space-evenly;
+      justify-content: center;
+      gap: 90px;
       margin: 50px 0px 50px 0px; }
       .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard {
         height: fit-content;
@@ -823,11 +826,16 @@ footer {
         width: 42px;
         height: 42px; }
     .gridIndex .indexSobreMi .indexSobreMiRow {
-      display: flex;
+      display: grid;
+      align-content: center;
+      grid-template-columns: 376px auto auto;
+      grid-template-rows: 100%;
+      grid-template-areas: "indexSobreMiRowColFoto indexSobreMiRowColDesc indexSobreMiRowColExtras";
       justify-content: center;
       gap: 3rem;
       margin-top: 50px; }
       .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto {
+        grid-area: indexSobreMiRowColFoto;
         display: flex;
         flex-direction: column;
         gap: 10px; }
@@ -842,8 +850,10 @@ footer {
             .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto .indexSobreMiRowColRedes a:hover {
               transform: scale(1.2); }
       .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColDesc {
+        grid-area: indexSobreMiRowColDesc;
         max-width: 420px; }
       .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras {
+        grid-area: indexSobreMiRowColExtras;
         max-width: 350px;
         min-width: 250px;
         display: flex;
@@ -1153,3 +1163,116 @@ footer {
   .gridPortfolio .footer {
     grid-area: footer;
     width: 100%; }
+
+/********************************************
+EMPIEZA EL MEDIA QUERIES DE INDEX
+*********************************************/
+@media screen and (max-width: 1080px) {
+  .gridIndex {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 800px 900px 1000px 1200px 800px auto;
+    grid-template-areas: "header header" "pixelartIndex infoIndex" "indexPortfolio indexPortfolio" "indexHabilidades indexHabilidades" "indexSobreMi indexSobreMi" "indexContacto indexContacto" "footer footer"; }
+    .gridIndex .pixelartIndex {
+      margin-top: 60px;
+      min-width: 500px; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre video {
+        animation-name: pixelartIndexVideo; }
+  @keyframes pixelartIndexVideo {
+    0% {
+      left: 250px;
+      opacity: 1; }
+    25% {
+      opacity: 1; }
+    50% { }
+    75% { }
+    100% {
+      left: 0px;
+      opacity: 1; } }
+    .gridIndex .pixelartIndexElementos1 {
+      display: none; }
+    .gridIndex .indexPortfolio {
+      margin-top: 80px; }
+      .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard {
+        max-width: 400px; }
+        .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexHeracles {
+          width: 300px; }
+        .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexOnix {
+          width: 300px; }
+    .gridIndex .indexHabilidades {
+      grid-area: indexHabilidades;
+      padding: 50px 0px; }
+      .gridIndex .indexHabilidades .indexHabilidadesTittle {
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 10px; }
+        .gridIndex .indexHabilidades .indexHabilidadesTittle div img {
+          width: 42px;
+          height: 42px; }
+      .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid {
+        gap: 2rem 6rem;
+        grid-template-columns: 286px 286px;
+        grid-template-rows: 142px 142px 142px;
+        grid-template-areas: "branding uxui" "motionsgraphics frontend" "fotografia modelado3d"; }
+      .gridIndex .indexHabilidades .indexHabilidadesRecursos div {
+        padding: 10px 10px;
+        display: flex;
+        justify-content: center; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div div {
+          padding: 10px 50px;
+          display: flex;
+          flex-direction: column-reverse;
+          text-align: center;
+          overflow: hidden; }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div div img {
+            width: 72px;
+            height: 72px; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div h4 {
+          transition: all 0.5s;
+          animation-duration: 1s;
+          transform: translateY(16px);
+          opacity: 0;
+          animation-timing-function: cubic-bezier(0.58, -0.27, 0.48, 1.21); }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills {
+          background: #FFFDEB;
+          box-shadow: 0px 0px 0px 0px #6E61FF00;
+          transition: all 0.5s;
+          animation-duration: 1s; }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover {
+            box-shadow: 5.93797px 5.93797px 0px #6E61FF; }
+            .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover ~ h4 {
+              opacity: 1;
+              transform: translateY(-8px); }
+    .gridIndex .indexSobreMi .indexSobreMiRow {
+      display: grid;
+      align-content: center;
+      grid-template-columns: 376px auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "indexSobreMiRowColFoto indexSobreMiRowColDesc" "indexSobreMiRowColExtras indexSobreMiRowColExtras";
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 50px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto {
+        grid-area: indexSobreMiRowColFoto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColDesc {
+        grid-area: indexSobreMiRowColDesc;
+        max-width: 420px; }
+      .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras {
+        grid-area: indexSobreMiRowColExtras;
+        display: flex;
+        max-width: fit-content;
+        flex-direction: row;
+        margin-top: 40px;
+        gap: 16px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras .indexSobreMiRowColExtrasDiv {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 6px; } }
+
+/********************************************
+TERMINA EL MEDIA QUERIES DEL INDEX
+*********************************************/

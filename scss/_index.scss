@@ -418,7 +418,8 @@
         .indexPortfolioPrimerFila{
             display: flex;
             width: 100%;
-            justify-content: space-evenly;
+            justify-content: center;
+            gap: 90px;
             margin: 50px 0px 50px 0px;
             .portfolioCard{
                 height: fit-content;
@@ -753,11 +754,18 @@
             }
         }
         .indexSobreMiRow{
-            display: flex;
+            display: grid;
+            align-content: center;
+            grid-template-columns: 376px auto auto;
+            grid-template-rows: 100%;
+            grid-template-areas: 
+            "indexSobreMiRowColFoto indexSobreMiRowColDesc indexSobreMiRowColExtras"
+            ;
             justify-content: center;
             gap: 3rem;
             margin-top: 50px;
             .indexSobreMiRowColFoto{
+                grid-area: indexSobreMiRowColFoto;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -776,9 +784,11 @@
                 }
             }
             .indexSobreMiRowColDesc{
+                grid-area: indexSobreMiRowColDesc;
                 max-width: 420px;
             }
             .indexSobreMiRowColExtras{
+                grid-area: indexSobreMiRowColExtras;
                 max-width: 350px;
                 min-width: 250px;
                 display: flex;

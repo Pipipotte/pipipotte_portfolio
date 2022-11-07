@@ -1,0 +1,185 @@
+/********************************************
+EMPIEZA EL MEDIA QUERIES DE INDEX
+*********************************************/
+
+@media screen and (min-width:1024px){
+    
+}
+
+@media screen and (max-width:1200px){
+
+}
+
+@media screen and (max-width:1080px){
+    .gridIndex{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 800px 900px 1000px 1200px 800px auto;
+        grid-template-areas: 
+        "header header"
+        "pixelartIndex infoIndex"
+        "indexPortfolio indexPortfolio"
+        "indexHabilidades indexHabilidades"
+        "indexSobreMi indexSobreMi"
+        "indexContacto indexContacto"
+        "footer footer"
+        ;
+        .pixelartIndex{
+            margin-top: 60px;
+            min-width: 500px;
+            .pixelartIndexPadre{
+                video{
+                    animation-name: pixelartIndexVideo;
+                    @keyframes pixelartIndexVideo{
+                        0%{
+                            left: 250px;
+                            opacity: 1;
+                        }
+                        25%{
+                            opacity: 1;
+                        }
+                        50%{
+                        }
+                        75%{
+                        }
+                        100%{
+                            left: 0px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .pixelartIndexElementos1{
+            display: none;
+        }
+        .indexPortfolio{
+            margin-top: 80px;
+            .indexPortfolioPrimerFila{
+                .portfolioCard{
+                    max-width: 400px;
+                    .portfolioCardImages{
+                        #carouselIndexHeracles{
+                            width: 300px;
+                        }
+                        #carouselIndexOnix{
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+        .indexHabilidades{
+            grid-area: indexHabilidades;
+            padding: 50px 0px;
+            .indexHabilidadesTittle{
+                height: fit-content;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                div{
+                    img{
+                        width: 42px;
+                        height: 42px;
+                    }
+                }
+            }
+            .indexHabilidadesDesc{
+                .indexHabilidadesDescGrid{
+                    gap: 2rem 6rem;
+                    grid-template-columns: 286px 286px;
+                    grid-template-rows: 142px 142px 142px;
+                    grid-template-areas: 
+                    "branding uxui"
+                    "motionsgraphics frontend"
+                    "fotografia modelado3d"
+                    ;
+                }
+            }
+            .indexHabilidadesRecursos{
+                div{
+                    padding: 10px 10px;
+                    display: flex;
+                    justify-content: center;
+                    div{
+                        padding: 10px 50px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        text-align: center;
+                        overflow: hidden;
+                        img{
+                            width: 72px;
+                            height: 72px;
+                        }
+                    }
+                    h4{
+                        transition: all 0.5s;
+                        animation-duration: 1s;
+                        transform: translateY(16px);
+                        opacity: 0;
+                        animation-timing-function: cubic-bezier(.58,-0.27,.48,1.21);
+                    }
+                    .iconSkills{
+                        background: #FFFDEB;
+                        box-shadow: 0px 0px 0px 0px #6E61FF00;
+                        transition: all 0.5s;
+                        animation-duration: 1s;
+                        &:hover{
+                            box-shadow: 5.93797px 5.93797px 0px #6E61FF;
+                            &~h4{
+                                opacity: 1;
+                                transform: translateY(-8px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .indexSobreMi{
+            .indexSobreMiRow{
+                display: grid;
+                align-content: center;
+                grid-template-columns: 376px auto;
+                grid-template-rows: auto auto;
+                grid-template-areas: 
+                "indexSobreMiRowColFoto indexSobreMiRowColDesc"
+                "indexSobreMiRowColExtras indexSobreMiRowColExtras"
+                ;
+                justify-content: center;
+                gap: 3rem;
+                margin-top: 50px;
+                .indexSobreMiRowColFoto{
+                    grid-area: indexSobreMiRowColFoto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .indexSobreMiRowColDesc{
+                    grid-area: indexSobreMiRowColDesc;
+                    max-width: 420px;
+                }
+                .indexSobreMiRowColExtras{
+                    grid-area: indexSobreMiRowColExtras;
+                    display: flex;
+                    max-width: fit-content;
+                    flex-direction: row;
+                    margin-top: 40px;
+                    gap: 16px;
+                    .indexSobreMiRowColExtrasDiv{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+
+}
+
+/********************************************
+TERMINA EL MEDIA QUERIES DEL INDEX
+*********************************************/
