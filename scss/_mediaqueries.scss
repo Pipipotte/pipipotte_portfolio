@@ -152,6 +152,30 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
             .indexPortfolioPrimerFila{
                 .portfolioCard{
                     max-width: 400px;
+                    .portfolioCardBox{
+                        .portfolioCardButton{
+                            margin-top: 6px;
+                            p{
+                                white-space: nowrap;
+                            }
+                        }
+                        .portfolioCardDesc{
+                            .portfolioCardDescAtributos{
+                                .portfolioCardDescAtributos1{
+                                    h4{
+                                        font-size: 14px;
+                                    }
+                                    white-space: nowrap;
+                                }
+                                .portfolioCardDescAtributos2{
+                                    h4{
+                                        font-size: 14px;
+                                    }
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
                     .portfolioCardImages{
                         #carouselIndexHeracles{
                             width: 300px;
@@ -270,7 +294,401 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
 }
 
 @media screen and (max-width:480px){
-
+    header{
+        .navDesktop{
+            ul{
+                padding: 0%;
+                margin: 0%;
+                gap: 2rem;
+                display: flex;
+                list-style: none;
+                width: 100%;
+                justify-content: space-between;
+                align-items: center;
+                li{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    text-decoration-line: none;
+                    font-family: Reem Kufi;
+                    font-size: 18px;
+                    transition: all 0.5s;
+                    animation-timing-function: ease-in-out;
+                    animation-duration: 0.5s;
+                    div{
+                        width: 0.1%;
+                        height: 6px;
+                        background-color: transparent;
+                        position:relative; z-index:3;
+                        transition: all 0.5s;
+                        animation-timing-function: ease-in-out;
+                        animation-duration: 0.5s;
+                    }
+                    a{
+                        white-space: nowrap;
+                        position:relative; z-index:1;
+                        line-height: 20px;
+                        letter-spacing: 0.05em;
+                        padding: 6px 20px 6px 20px;
+                        color: #494949;
+                        transition: all 0.5s;
+                        animation-timing-function: ease-in-out;
+                        animation-duration: 0.5s;
+                        &:focus{
+                            font-family: Reem Kufi;
+                            font-weight: 800;
+                            color: #494949;
+                        }
+                        &:active{
+                            color: #494949;
+                            font-weight: 800;
+                        }
+                    }
+                    &:hover a{
+                        background-color: white;
+                        animation-name: hoverNavDesktopContainer;
+                        animation-duration: 0.5s;
+                        box-shadow: 0px 8px 27px -8px rgba(0,0,0,0.1);
+                        @keyframes hoverNavDesktopContainer{
+                            0%{
+                                transform: translate(0px, 0px);
+                                opacity: 1;
+                            }
+                            50%{
+                                transform: translate(0px, 5px);
+                            }
+                            100%{
+                                transform: translate(0px, 0px);
+                            }
+                        }
+                    }
+                    &:hover div{
+                        width: 100%;
+                        height: 6px;
+                        background-color: #E5E7B3;
+                        border-top-left-radius: 6px;
+                        border-top-right-radius: 6px;
+                        animation-name: hoverNavDesktop;
+                        animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                        animation-duration: 0.5s;
+                        @keyframes hoverNavDesktop{
+                            0%{
+                                transform: scale(0.10);
+                                transform: translate(0px, -10px);
+                                opacity: 0;
+                            }
+                            100%{
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .logo-variant1{
+            margin: 0px 16px 0px 16px;
+        }
+    }
+    .gridIndex{
+        gap: 50px 0px;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 500px 600px auto 2000px 1500px 800px auto;
+        grid-template-areas:
+        "header"
+        "pixelartIndex"
+        "infoIndex"
+        "indexPortfolio"
+        "indexHabilidades"
+        "indexSobreMi"
+        "indexContacto"
+        "footer"
+        ;
+        .pixelartIndex{
+            margin-top: 464px;
+            width: 100%;
+            min-width: 100px;
+            .pixelartIndexPadre{
+                position: absolute;
+                .pixelartIndexElementos2{
+                    top: -100px;
+                    left: 50px;
+                    transform: scale(0.9);
+                }
+                .pixelartIndexRectangle{
+                    left: 30px;
+                    top: 40px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                video{
+                    left: 62px;
+                    width: 80%;
+                    @keyframes pixelartIndexVideo{
+                        0%{
+                            left: 200px;
+                            opacity: 1;
+                        }
+                        25%{
+                            opacity: 1;
+                        }
+                        50%{
+                        }
+                        75%{
+                        }
+                        100%{
+                            left: 62px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .infoIndex{
+            .infoIndexHola{
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 30px;
+                letter-spacing: 0.05em;
+                color: #494949;
+                margin-bottom: 20px;
+            }
+            .infoIndexDesc{
+                margin: 6px 0px 12px 0px;
+                max-width: 576px;
+                min-width: 330px;
+            }
+            .infoIndexDesc2{
+                margin: 6px 0px 6px 0px;
+                max-width: 292px;
+                min-width: 200px;
+            }
+            .infoIndexLogo{
+                pointer-events: none;
+                position: relative;
+                .infoIndexLogoJoaquin{
+                    z-index: 7;
+                    position: relative;
+                    translate: -40px;
+                    width: fit-content;
+                }
+                .infoIndexLogoAviles{
+                    z-index: 9;
+                    position: relative;
+                    translate: 18px -10px;
+                    width: fit-content;
+                }
+                .infoIndexLogoPipipotte{
+                    z-index: 8;
+                    position: absolute;
+                    top: 50px;
+                    left: -85px;
+                    width: fit-content;
+                }
+            }
+        }
+        .indexPortfolio{
+            margin-top: 0px;
+            .indexPortfolioTittle{
+                .indexPortfolioTittleTrabajos{
+                    transform: scale(0.7);
+                }
+            }
+            .indexPortfolioPrimerFila{
+                flex-direction: column;
+                align-items: center;
+                .portfolioCard{
+                    max-width: 400px;
+                    .portfolioCardBox{
+                        .portfolioCardButton{
+                            margin-top: 6px;
+                            p{
+                                white-space: nowrap;
+                            }
+                        }
+                        .portfolioCardDesc{
+                            .portfolioCardDescAtributos{
+                                .portfolioCardDescAtributos1{
+                                    h4{
+                                        font-size: 14px;
+                                    }
+                                    white-space: nowrap;
+                                }
+                                .portfolioCardDescAtributos2{
+                                    h4{
+                                        font-size: 14px;
+                                    }
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                    .portfolioCardImages{
+                        #carouselIndexHeracles{
+                            width: 300px;
+                        }
+                        #carouselIndexOnix{
+                            width: 300px;
+                        }
+                    }
+                }
+            }
+        }
+        .infoIndex{
+            padding-top: 180px;
+        }
+        .indexHabilidades{
+            margin: 0px;
+            padding: 0px;
+            grid-area: indexHabilidades;
+            .indexHabilidadesDesc{
+                .indexHabilidadesDescGrid{
+                    gap: 2rem 6rem;
+                    grid-template-columns: 286px;
+                    grid-template-rows: 142px 142px 142px 142px 142px 142px;
+                    grid-template-areas: 
+                    "branding"
+                    "uxui"
+                    "motionsgraphics"
+                    "frontend"
+                    "fotografia"
+                    "modelado3d"
+                    ;
+                }
+            }
+            .indexHabilidadesTittle{
+                .indexHabilidadesTittleKit{
+                    transform: scale(0.7);
+                }
+            }
+            .indexHabilidadesRecursos{
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 45px;
+                div{
+                    margin: 0px 10px;
+                    padding: 0px;
+                    display: flex;
+                    justify-content: center;
+                    div{
+                        margin: 0px;
+                        padding: 0px;
+                        display: flex;
+                        flex-direction: column-reverse;
+                        text-align: center;
+                        overflow: hidden;
+                        img{
+                            width: 72px;
+                            height: 72px;
+                        }
+                    }
+                    h4{
+                        transition: all 0.5s;
+                        animation-duration: 1s;
+                        transform: translateY(16px);
+                        opacity: 0;
+                        animation-timing-function: cubic-bezier(.58,-0.27,.48,1.21);
+                    }
+                    .iconSkills{
+                        background: #FFFDEB;
+                        box-shadow: 0px 0px 0px 0px #6E61FF00;
+                        transition: all 0.5s;
+                        animation-duration: 1s;
+                        &:hover{
+                            box-shadow: 5.93797px 5.93797px 0px #6E61FF;
+                            &~h4{
+                                opacity: 1;
+                                transform: translateY(-8px);
+                            }
+                        }
+                    }
+                }
+                .indexHabilidadesRecursosRow1{
+                    margin: 0px;
+                    padding: 0px;
+                    flex-direction: column;
+                }
+                .indexHabilidadesRecursosRow2{
+                    margin: 0px;
+                    padding: 0px;
+                    flex-direction: column;
+                }
+            }
+        }
+        .indexSobreMi{
+            padding: 0px;
+            margin: 0px;
+            .indexSobreMiTittle{
+                .indexSobreMiTittleMi{
+                    transform: scale(0.7);
+                }
+            }
+            .indexSobreMiRow{
+                display: grid;
+                align-content: center;
+                grid-template-columns: 100%;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                "indexSobreMiRowColFoto"
+                "indexSobreMiRowColDesc"
+                "indexSobreMiRowColExtras"
+                "indexSobreMiRowColExtras"
+                ;
+                justify-content: center;
+                gap: 3rem;
+                margin-top: 50px;
+                .indexSobreMiRowColFoto{
+                    grid-area: indexSobreMiRowColFoto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                }
+                .indexSobreMiRowColDesc{
+                    grid-area: indexSobreMiRowColDesc;
+                    max-width: 420px;
+                }
+                .indexSobreMiRowColExtras{
+                    transform: scale(0.8);
+                    grid-area: indexSobreMiRowColExtras;
+                    display: flex;
+                    max-width: fit-content;
+                    flex-direction: row;
+                    margin-top: 40px;
+                    justify-content: center;
+                    gap: 40px;
+                    .indexSobreMiRowColExtrasDiv{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 6px;
+                    }
+                }
+            }
+        }
+        .indexContacto{
+            margin: 0px;
+            padding: 0px;
+            .indexContactoTittle{
+                align-items: center;
+                flex-direction: row;
+                justify-content: center;
+                .indexContactoTittleContacto{
+                    transform: scale(0.6);
+                }
+            }
+            .indexContactoForm{
+                .indexContactoContainer{
+                    div{
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 /********************************************
