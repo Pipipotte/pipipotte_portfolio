@@ -13,11 +13,11 @@
         <!---TIPOGRAFÍAS-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Reem+Kufi&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,6 +26,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="fuentes/robotoFlex/stylesheet.css" type="text/css" charset="utf-8" />
+
     </head>
 
     <body>
@@ -33,6 +35,9 @@
             <header class="header">
                 <div class="logo-variant1">
                     <a href="#scrollTop"><img src="./media/joaquinaviles-logo.svg" alt="logo"></a>
+                    <div class="headerPipipotteLogo rotation">
+                        <img src="./media/pipipotte-logo.svg" alt="logo">
+                    </div>
                 </div>
                 <nav class="navDesktop">
                     <ul>
@@ -99,28 +104,34 @@
                 </div>
             </div>
             <div class="infoIndex">
-                <p>
+                <p class="infoIndexHola">   
                     Hola! soy
                 </p>
-                <h2>
-                    Joaquín Avilés
-                </h2>
+                <div class="infoIndexLogo">
+                    <div class="infoIndexLogoJoaquin">
+                        <img src="./media/robotoFlexElements/JoaquínIndex.svg" alt="">
+                    </div>
+                    <div class="infoIndexLogoAviles">
+                        <img src="./media/robotoFlexElements/AvilésIndex.svg" alt="">
+                    </div>
+                    <div class="infoIndexLogoPipipotte rotation">
+                        <img src="./media/robotoFlexElements/pipipotteRotationIndex.svg" alt="">
+                    </div>
+                </div>
                 <p class="infoIndexDesc">
                     Estudiante en el último año de la Licenciatura en Diseño Visual, UNRN.
-                    Me focalizo en Motions Graphics, UX/UI, Branding y Frontend.
+                    <strong>Me focalizo en Motions Graphics, UX/UI, Branding y Frontend.</strong>
                 </p>
-                <p class="infoIndexDesc">
+                <p class="infoIndexDesc2">
                     Pegale una buena ojeada a la web, la hice con mucha pasión 👀
                 </p>
             </div>
 <!-----------------------------SECCIÓN PORTFOLIO----------------------------->
             <div class="indexPortfolio" id="indexPortfolio">
                 <div class="indexPortfolioTittle">
-                    <h3>
-                        Algunos de mis trabajos
-                    </h3>
-                    <div>
-                        <img src="./media/Icon=Click.svg" alt="icono puntero">
+                    <div class="indexPortfolioTittleBG"></div>
+                    <div class="indexPortfolioTittleTrabajos">
+                        <img src="./media/indextitulos/algunosDeMisTrabajos.svg" alt="algunos de mis trabajos">
                     </div>
                 </div>
                 <div class="indexPortfolioPrimerFila">
@@ -268,11 +279,9 @@
             <!-----------------------------SECCIÓN HABILIDADES----------------------------->
             <div class="indexHabilidades" id="indexHabilidades">
                 <div class="indexHabilidadesTittle">
-                    <h3>
-                        Mi kit de diseñador
-                    </h3>
-                    <div>
-                        <img src="./media/Icon=Pluma.svg" alt="icono pluma">
+                    <div class="indexHabilidadesTittleBG"></div>
+                    <div class="indexHabilidadesTittleKit">
+                        <img src="./media/indextitulos/miKitDeDiseñador.svg" alt="mi kit de diseñador">
                     </div>
                 </div>
                 <div class="indexHabilidadesDesc">
@@ -377,11 +386,9 @@
             <!-----------------------------SECCIÓN CONTACTO----------------------------->
             <div class="indexSobreMi" id="indexSobreMi">
                 <div class="indexSobreMiTittle">
-                    <h3>
-                        Sobre mí
-                    </h3>
-                    <div>
-                        <img src="./media/Icon=Comments.svg" alt="icono pluma">
+                    <div class="indexSobreMiTittleBG"></div>
+                    <div class="indexSobreMiTittleMi">
+                        <img src="./media/indextitulos/algoSobreMi.svg" alt="algo sobre mi">
                     </div>
                 </div>
                 <div class="indexSobreMiRow">
@@ -453,14 +460,6 @@
                         </div>
                         <div class="indexSobreMiRowColExtrasDiv">
                             <h5 class="h5">
-                                Hobbies
-                            </h5>
-                            <p>
-                                Fotografía, diseño 3D
-                            </p>
-                        </div>
-                        <div class="indexSobreMiRowColExtrasDiv">
-                            <h5 class="h5">
                                 Últimas lecturas
                             </h5>
                             <div>
@@ -480,16 +479,22 @@
                                 </h6>
                             </div>
                         </div>
+                        <div class="indexSobreMiRowColExtrasDiv">
+                            <h5 class="h5">
+                                Hobbies
+                            </h5>
+                            <p>
+                                Fotografía, diseño 3D
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="indexContacto" id="indexContacto">
                 <div class="indexContactoTittle">
-                    <h3>
-                        ¿Necesitás un diseñador?
-                    </h3>
-                    <div>
-                        <img src="./media/Icon=Comments.svg" alt="icono pluma">
+                    <div class="indexContactoTittleBG"></div>
+                    <div class="indexContactoTittleContacto">
+                        <img src="./media/indextitulos/necesitasUnDiseñador.svg" alt="¿necesitas un diseñador?">
                     </div>
                 </div>
                 <div class="indexContactoForm">

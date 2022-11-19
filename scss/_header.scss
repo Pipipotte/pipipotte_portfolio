@@ -1,7 +1,7 @@
 header{
     position: sticky;
     top: 0px;
-    z-index: 4;
+    z-index: 200;
     background: rgba(254, 248, 244, 0.95);
     backdrop-filter: blur(4px);
     grid-area: header;
@@ -9,7 +9,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
+    height: 153px;
     align-items: center;
     .navDesktop{
         display: flex;
@@ -27,7 +27,7 @@ header{
                 flex-wrap: nowrap;
                 flex-direction: column;
                 text-decoration-line: none;
-                font-family: Reem Kufi;
+                font-family: 'Kanit', sans-serif;
                 font-size: 18px;
                 transition: all 0.5s;
                 animation-timing-function: ease-in-out;
@@ -51,7 +51,7 @@ header{
                     animation-timing-function: ease-in-out;
                     animation-duration: 0.5s;
                     &:focus{
-                        font-family: Reem Kufi;
+                        font-family: 'Kanit', sans-serif;
                         font-weight: 800;
                         color: #494949;
                     }
@@ -101,6 +101,12 @@ header{
         }
     }
     .logo-variant1{
+        position: relative;
         margin: 0px 16px 0px 16px;
+        .headerPipipotteLogo{
+            position: absolute;
+            top: 42px;
+            left: -20px;
+        }
     }
 }

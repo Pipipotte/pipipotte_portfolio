@@ -1,5 +1,7 @@
 .gridPortfolio{
     display: grid;
+    margin-left: 6%;
+    margin-right: 6%;
     align-content: flex-start;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 800px auto;

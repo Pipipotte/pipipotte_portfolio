@@ -4,7 +4,17 @@
 }
 html {
 	scroll-behavior: smooth;
-    scroll-padding-top: 150px;
+    scroll-padding-top: 150px
+}
+html{
+    height: 100%;
+    min-height: 100% !important;
+    height: 100%;
+}
+@font-face{
+    font-family: "robotoflex";
+    src: url("../fuentes/robotoFlex/robotoflex.woff") format("woff-variations");
+    src: url("../fuentes/robotoFlex/robotoflex.woff2") format("woff2-variations");
 }
 ::-webkit-scrollbar{
     width: 10px;
@@ -30,17 +40,23 @@ p::selection{
 }
 
 body{
-    margin-left: 6%;
-    margin-right: 6%;
+    background-color: #FEF8F5;
     background-image: url(../media/Background.jpg);
     background-repeat: repeat;
-    background-color: #FEF8F5
+}
+body{
+    min-height: 100% !important;
+    height: 100%;
+}
+.gridIndex{
+    margin-left: 6%;
+    margin-right: 6%;
 }
 a{
     text-decoration: none;
 }
 p{
-    font-family: Reem Kufi;
+    font-family: 'Kanit', sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -50,7 +66,7 @@ p{
     margin: 0;
 }
 h2{
-    font-family: Signika;
+    font-family: 'Teko', sans-serif;
     font-size: 36px;
     font-weight: 700;
     line-height: 54px;
@@ -59,15 +75,16 @@ h2{
     color: #6E61FF;
 }
 h3{
-    font-family: 'Signika';
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 38px;
-    color: #494949;
+    font-family: 'robotoflex';
+    color: #6E61FF;
+    font-size: 96px;
+    font-style: italic;
+    line-height: 92px;
+    text-align: left;
+    font-variation-settings: 'GRAD' -200, 'wdth' 79, 'slnt' -10, 'XOPQ' 96, 'YOPQ' 72, 'XTRA' 468, 'YTUC' 712, 'YTLC' 416, 'YTAS' 774, 'YTDE' -269, 'YTFI' 606;
 }
 h4{
-    font-family: Reem Kufi;
+    font-family: 'Kanit', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
@@ -76,7 +93,7 @@ h4{
     margin: 0;
 }
 h5{
-    font-family: 'Reem Kufi';
+    font-family: 'Kanit', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -132,5 +149,16 @@ h6{
         box-shadow: 6.197530746459961px 6.197530746459961px 0px 0px #6E61FF;
         transition: all 0.5s;
         animation-duration: 1s;
+    }
+}
+.rotation{
+    animation: rotation 10s infinite linear;
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
     }
 }
