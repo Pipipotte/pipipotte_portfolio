@@ -1561,7 +1561,7 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
       margin: 0px;
       padding: 0px; } }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
   header .navDesktop ul {
     padding: 0%;
     margin: 0%;
@@ -1641,26 +1641,30 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
   .gridIndex {
     gap: 50px 0px;
     grid-template-columns: 1fr;
-    grid-template-rows: auto 500px 600px auto 2000px 1500px 800px auto;
+    grid-template-rows: auto auto 600px auto 2000px 1500px 800px auto;
     grid-template-areas: "header" "pixelartIndex" "infoIndex" "indexPortfolio" "indexHabilidades" "indexSobreMi" "indexContacto" "footer"; }
     .gridIndex .pixelartIndex {
-      margin-top: 464px;
+      display: block;
+      margin-top: 100px;
       width: 100%;
       min-width: 100px; }
-      .gridIndex .pixelartIndex .pixelartIndexPadre {
-        position: absolute; }
-        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 {
-          top: -100px;
-          left: 50px;
-          transform: scale(0.9); }
-        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
-          left: 30px;
-          top: 40px; }
-          .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle img {
-            width: 100%; }
-        .gridIndex .pixelartIndex .pixelartIndexPadre video {
-          left: 62px;
-          width: 80%; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 {
+        display: none;
+        top: -100px;
+        left: 50px;
+        transform: scale(0.9); }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
+        position: static; }
+        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle img {
+          width: 100%; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre video {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 88vw;
+        /* Need a specific value to work */
+        height: fit-content;
+        top: 0px; }
   @keyframes pixelartIndexVideo {
     0% {
       left: 200px;
@@ -1670,46 +1674,48 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
     50% { }
     75% { }
     100% {
-      left: 62px;
+      left: 0px;
       opacity: 1; } }
-    .gridIndex .infoIndex .infoIndexHola {
-      font-size: 30px;
-      font-weight: 600;
-      line-height: 30px;
-      letter-spacing: 0.05em;
-      color: #494949;
-      margin-bottom: 20px; }
-    .gridIndex .infoIndex .infoIndexDesc {
-      margin: 6px 0px 12px 0px;
-      max-width: 576px;
-      min-width: 330px; }
-    .gridIndex .infoIndex .infoIndexDesc2 {
-      margin: 6px 0px 6px 0px;
-      max-width: 292px;
-      min-width: 200px; }
-    .gridIndex .infoIndex .infoIndexLogo {
-      pointer-events: none;
-      position: relative; }
-      .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoJoaquin {
-        z-index: 7;
-        position: relative;
-        translate: -40px;
-        width: fit-content; }
-      .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoAviles {
-        z-index: 9;
-        position: relative;
-        translate: 18px -10px;
-        width: fit-content; }
-      .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoPipipotte {
-        z-index: 8;
-        position: absolute;
-        top: 50px;
-        left: -85px;
-        width: fit-content; }
+    .gridIndex .infoIndex {
+      padding-top: 0px; }
+      .gridIndex .infoIndex .infoIndexHola {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #494949;
+        margin-bottom: 20px; }
+      .gridIndex .infoIndex .infoIndexDesc {
+        margin: 6px 0px 12px 0px;
+        max-width: 576px;
+        min-width: 330px; }
+      .gridIndex .infoIndex .infoIndexDesc2 {
+        margin: 6px 0px 6px 0px;
+        max-width: 292px;
+        min-width: 200px; }
+      .gridIndex .infoIndex .infoIndexLogo {
+        pointer-events: none;
+        position: relative; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoJoaquin {
+          z-index: 7;
+          position: relative;
+          translate: -40px;
+          width: fit-content; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoAviles {
+          z-index: 9;
+          position: relative;
+          translate: 18px -10px;
+          width: fit-content; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoPipipotte {
+          z-index: 8;
+          position: absolute;
+          top: 50px;
+          left: -85px;
+          width: fit-content; }
     .gridIndex .indexPortfolio {
       margin-top: 0px; }
-      .gridIndex .indexPortfolio .indexPortfolioTittle .indexPortfolioTittleTrabajos {
-        transform: scale(0.7); }
+      .gridIndex .indexPortfolio .indexPortfolioTittle .indexPortfolioTittleTrabajos img {
+        width: 70vw; }
       .gridIndex .indexPortfolio .indexPortfolioPrimerFila {
         flex-direction: column;
         align-items: center; }
@@ -1731,8 +1737,6 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
             width: 300px; }
           .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexOnix {
             width: 300px; }
-    .gridIndex .infoIndex {
-      padding-top: 180px; }
     .gridIndex .indexHabilidades {
       margin: 0px;
       padding: 0px;
@@ -1742,8 +1746,8 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
         grid-template-columns: 286px;
         grid-template-rows: 142px 142px 142px 142px 142px 142px;
         grid-template-areas: "branding" "uxui" "motionsgraphics" "frontend" "fotografia" "modelado3d"; }
-      .gridIndex .indexHabilidades .indexHabilidadesTittle .indexHabilidadesTittleKit {
-        transform: scale(0.7); }
+      .gridIndex .indexHabilidades .indexHabilidadesTittle .indexHabilidadesTittleKit img {
+        width: 70vw; }
       .gridIndex .indexHabilidades .indexHabilidadesRecursos {
         margin: 0px;
         padding: 0px;
@@ -1793,8 +1797,8 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
     .gridIndex .indexSobreMi {
       padding: 0px;
       margin: 0px; }
-      .gridIndex .indexSobreMi .indexSobreMiTittle .indexSobreMiTittleMi {
-        transform: scale(0.7); }
+      .gridIndex .indexSobreMi .indexSobreMiTittle .indexSobreMiTittleMi img {
+        width: 70vw; }
       .gridIndex .indexSobreMi .indexSobreMiRow {
         display: grid;
         align-content: center;
@@ -1833,8 +1837,8 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
         align-items: center;
         flex-direction: row;
         justify-content: center; }
-        .gridIndex .indexContacto .indexContactoTittle .indexContactoTittleContacto {
-          transform: scale(0.6); }
+        .gridIndex .indexContacto .indexContactoTittle .indexContactoTittleContacto img {
+          width: 70vw; }
       .gridIndex .indexContacto .indexContactoForm .indexContactoContainer div img {
         display: none; } }
 
