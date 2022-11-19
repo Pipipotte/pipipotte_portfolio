@@ -271,14 +271,14 @@ header {
         width: 20px; }
       header .navMobile .navMobilePill .burgerAbrir {
         position: absolute;
-        top: 18px;
+        top: 5px;
         visibility: hidden;
         transform: scale(0);
         animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
         transition: all 0.5s; }
       header .navMobile .navMobilePill .burgerCerrar {
         position: absolute;
-        top: 18px;
+        top: 5px;
         animation-timing-function: cubic-bezier(0.91, -0.56, 0.37, 1.65);
         transition: all 0.5s; }
     header .navMobile .ulMobile {
@@ -311,7 +311,7 @@ header {
         header .navMobile .ulMobile li a {
           color: #494949; }
     header .navMobile #navMobileShower {
-      display: flex;
+      display: none;
       flex-direction: row-reverse; }
       header .navMobile #navMobileShower:checked ~ .ulMobile {
         height: 20px;

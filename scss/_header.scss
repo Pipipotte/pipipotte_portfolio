@@ -131,7 +131,7 @@ header{
             }
             .burgerAbrir{
                 position: absolute;
-                top: 18px;
+                top: 5px;
                 visibility: hidden;
                 transform: scale(0);
                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
@@ -139,7 +139,7 @@ header{
             }
             .burgerCerrar{
                 position: absolute;
-                top: 18px;
+                top: 5px;
                 animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
                 transition: all 0.5s;
             }
@@ -177,7 +177,7 @@ header{
             }
         }
         #navMobileShower{
-            display: flex;
+            display: none;
             flex-direction: row-reverse;
             &:checked{
                 ~ .ulMobile {
