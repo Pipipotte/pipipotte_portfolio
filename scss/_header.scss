@@ -109,4 +109,100 @@ header{
             left: -20px;
         }
     }
+    .navMobile{
+        overflow: hidden;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        .navMobileShower{
+            border: red solid 2px;
+        }
+        .navMobilePill{
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: #6E61FF;
+            width: 140px;
+            height: 30px;
+            padding-right: 10px;
+            border-radius: 16px 16px 0px 0px;
+            transition: all 0.5s;
+            img{
+                width: 20px;
+            }
+            .burgerAbrir{
+                position: absolute;
+                top: 18px;
+                visibility: hidden;
+                transform: scale(0);
+                animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                transition: all 0.5s;
+            }
+            .burgerCerrar{
+                position: absolute;
+                top: 18px;
+                animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                transition: all 0.5s;
+            }
+        }
+        .ulMobile{
+            padding: 0px;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 280px;
+            justify-content: space-around;
+            text-align: center;
+            list-style: none;
+            border-width: 0px 4px 4px 4px;
+            border-style: solid;
+            border-color: #6E61FF;
+            transform:translateY(0px);
+            opacity: 1;
+            animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+            transition: all 0.5s;
+            pointer-events: all;
+            li{
+                width: 100%;
+                font-family: 'kanit';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 18px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                a{
+                    color: #494949;
+                }
+            }
+        }
+        #navMobileShower{
+            display: flex;
+            flex-direction: row-reverse;
+            &:checked{
+                ~ .ulMobile {
+                    height: 20px;
+                    opacity: 0;
+                    transform:translateY(-10px);
+                    pointer-events: none;
+                    animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                    transition: all 0.5s;
+                }
+                ~ .navMobilePill{
+                    border-radius: 16px 16px 16px 16px;
+                    .burgerAbrir{
+                        visibility:visible ;
+                        transform: scale(1);
+                        animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                        transition: all 0.5s;
+                    }
+                    .burgerCerrar{
+                        transform: scale(0);
+                        animation-timing-function: cubic-bezier(.91,-0.56,.37,1.65);
+                        transition: all 0.5s;
+                    }
+                }
+            }
+        }
+    }
 }
