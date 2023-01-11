@@ -1639,9 +1639,9 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
   header .logo-variant1 {
     margin: 0px 16px 0px 16px; }
   .gridIndex {
-    gap: 50px 0px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 600px auto 2000px 1500px 800px auto;
+    gap: 100px 0px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto auto auto;
     grid-template-areas: "header" "pixelartIndex" "infoIndex" "indexPortfolio" "indexHabilidades" "indexSobreMi" "indexContacto" "footer"; }
     .gridIndex .pixelartIndex {
       display: block;
@@ -1687,12 +1687,12 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
         margin-bottom: 20px; }
       .gridIndex .infoIndex .infoIndexDesc {
         margin: 6px 0px 12px 0px;
-        max-width: 576px;
-        min-width: 330px; }
+        max-width: 90%;
+        min-width: 40%; }
       .gridIndex .infoIndex .infoIndexDesc2 {
         margin: 6px 0px 6px 0px;
-        max-width: 292px;
-        min-width: 200px; }
+        max-width: 90%;
+        min-width: 40%; }
       .gridIndex .infoIndex .infoIndexLogo {
         pointer-events: none;
         position: relative; }
@@ -1715,7 +1715,7 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
     .gridIndex .indexPortfolio {
       margin-top: 0px; }
       .gridIndex .indexPortfolio .indexPortfolioTittle .indexPortfolioTittleTrabajos img {
-        width: 70vw; }
+        width: 60vw; }
       .gridIndex .indexPortfolio .indexPortfolioPrimerFila {
         flex-direction: column;
         align-items: center; }
@@ -1747,7 +1747,7 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
         grid-template-rows: 142px 142px 142px 142px 142px 142px;
         grid-template-areas: "branding" "uxui" "motionsgraphics" "frontend" "fotografia" "modelado3d"; }
       .gridIndex .indexHabilidades .indexHabilidadesTittle .indexHabilidadesTittleKit img {
-        width: 70vw; }
+        width: 50vw; }
       .gridIndex .indexHabilidades .indexHabilidadesRecursos {
         margin: 0px;
         padding: 0px;
@@ -1798,7 +1798,7 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
       padding: 0px;
       margin: 0px; }
       .gridIndex .indexSobreMi .indexSobreMiTittle .indexSobreMiTittleMi img {
-        width: 70vw; }
+        width: 100%; }
       .gridIndex .indexSobreMi .indexSobreMiRow {
         display: grid;
         align-content: center;
@@ -1838,7 +1838,277 @@ EMPIEZA EL MEDIA QUERIES DE INDEX
         flex-direction: row;
         justify-content: center; }
         .gridIndex .indexContacto .indexContactoTittle .indexContactoTittleContacto img {
-          width: 70vw; }
+          width: 60vw; }
+      .gridIndex .indexContacto .indexContactoForm .indexContactoContainer div img {
+        display: none; } }
+
+@media screen and (max-width: 480px) {
+  header .navDesktop ul {
+    padding: 0%;
+    margin: 0%;
+    gap: 2rem;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center; }
+    header .navDesktop ul li {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      text-decoration-line: none;
+      font-family: Reem Kufi;
+      font-size: 18px;
+      transition: all 0.5s;
+      animation-timing-function: ease-in-out;
+      animation-duration: 0.5s; }
+      header .navDesktop ul li div {
+        width: 0.1%;
+        height: 6px;
+        background-color: transparent;
+        position: relative;
+        z-index: 3;
+        transition: all 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-duration: 0.5s; }
+  header .logo-variant1 {
+    margin: 0px 16px 0px 16px; }
+  .gridIndex {
+    gap: 100px 0px;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto auto 800px auto;
+    grid-template-areas: "header" "pixelartIndex" "infoIndex" "indexPortfolio" "indexHabilidades" "indexSobreMi" "indexContacto" "footer"; }
+    .gridIndex .pixelartIndex {
+      display: block;
+      margin-top: 100px;
+      width: 100%;
+      min-width: 100px; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexElementos2 {
+        display: none;
+        top: -100px;
+        left: 50px;
+        transform: scale(0.9); }
+      .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle {
+        position: static; }
+        .gridIndex .pixelartIndex .pixelartIndexPadre .pixelartIndexRectangle img {
+          width: 100%; }
+      .gridIndex .pixelartIndex .pixelartIndexPadre video {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        /* Need a specific value to work */
+        height: fit-content;
+        top: 0px; }
+  @keyframes pixelartIndexVideo {
+    0% {
+      left: 200px;
+      opacity: 1; }
+    25% {
+      opacity: 1; }
+    50% { }
+    75% { }
+    100% {
+      left: 0px;
+      opacity: 1; } }
+    .gridIndex .infoIndex {
+      padding-top: 0px; }
+      .gridIndex .infoIndex .infoIndexHola {
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.05em;
+        color: #494949;
+        margin-bottom: 20px; }
+      .gridIndex .infoIndex .infoIndexDesc {
+        margin: 6px 0px 12px 0px;
+        max-width: 90%;
+        min-width: 40%; }
+      .gridIndex .infoIndex .infoIndexDesc2 {
+        margin: 6px 0px 6px 0px;
+        max-width: 90%;
+        min-width: 40%; }
+      .gridIndex .infoIndex .infoIndexLogo {
+        pointer-events: none;
+        position: relative; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoJoaquin {
+          z-index: 7;
+          position: relative;
+          translate: -40px;
+          width: 237px; }
+          .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoJoaquin img {
+            width: 100%; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoAviles {
+          z-index: 9;
+          position: relative;
+          translate: 18px -10px;
+          width: 237px; }
+          .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoAviles img {
+            width: 100%; }
+        .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoPipipotte {
+          z-index: 8;
+          position: absolute;
+          top: 30px;
+          left: -85px;
+          width: 150px; }
+          .gridIndex .infoIndex .infoIndexLogo .infoIndexLogoPipipotte img {
+            width: 100%; }
+    .gridIndex .indexPortfolio {
+      margin-top: 0px; }
+      .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard {
+        max-width: 200px; }
+        .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton {
+          margin-top: 6px; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton p {
+            white-space: nowrap; }
+        .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc {
+          gap: 20px; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos1 {
+            white-space: nowrap; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos1 h4 {
+              font-size: 14px; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos2 {
+            white-space: nowrap; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos2 h4 {
+              font-size: 14px; }
+      .gridIndex .indexPortfolio .indexPortfolioTittle .indexPortfolioTittleTrabajos img {
+        width: 60vw; }
+      .gridIndex .indexPortfolio .indexPortfolioPrimerFila {
+        flex-direction: column;
+        align-items: center; }
+        .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard {
+          max-width: 90%; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton {
+            margin-top: 6px;
+            flex-direction: column; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardButton p {
+              white-space: nowrap; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos {
+            width: 100%;
+            align-items: flex-start; }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos1 {
+              white-space: nowrap;
+              animation: slider2 8s infinite linear; }
+              .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos1 h4 {
+                font-size: 14px; }
+  @keyframes slider2 {
+    0% {
+      transform: translate(0%, 0%); }
+    50% {
+      transform: translate(-40%, 0%); }
+    100% {
+      transform: translate(0%, 0%); } }
+            .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos2 {
+              white-space: nowrap;
+              animation: slider2 8s infinite linear; }
+              .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardBox .portfolioCardDesc .portfolioCardDescAtributos .portfolioCardDescAtributos2 h4 {
+                font-size: 14px; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexHeracles {
+            width: 55vw; }
+          .gridIndex .indexPortfolio .indexPortfolioPrimerFila .portfolioCard .portfolioCardImages #carouselIndexOnix {
+            width: 55vw; }
+    .gridIndex .indexHabilidades {
+      margin: 0px;
+      padding: 0px;
+      grid-area: indexHabilidades; }
+      .gridIndex .indexHabilidades .indexHabilidadesDesc .indexHabilidadesDescGrid {
+        gap: 2rem 6rem;
+        grid-template-columns: 286px;
+        grid-template-rows: 142px 142px 142px 142px 142px 142px;
+        grid-template-areas: "branding" "uxui" "motionsgraphics" "frontend" "fotografia" "modelado3d"; }
+      .gridIndex .indexHabilidades .indexHabilidadesTittle .indexHabilidadesTittleKit img {
+        width: 50vw; }
+      .gridIndex .indexHabilidades .indexHabilidadesRecursos {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 45px; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos div {
+          margin: 0px 10px;
+          padding: 0px;
+          display: flex;
+          justify-content: center; }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div div {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+            overflow: hidden; }
+            .gridIndex .indexHabilidades .indexHabilidadesRecursos div div img {
+              width: 72px;
+              height: 72px; }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div h4 {
+            transition: all 0.5s;
+            animation-duration: 1s;
+            transform: translateY(16px);
+            opacity: 0;
+            animation-timing-function: cubic-bezier(0.58, -0.27, 0.48, 1.21); }
+          .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills {
+            background: #FFFDEB;
+            box-shadow: 0px 0px 0px 0px #6E61FF00;
+            transition: all 0.5s;
+            animation-duration: 1s; }
+            .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover {
+              box-shadow: 5.93797px 5.93797px 0px #6E61FF; }
+              .gridIndex .indexHabilidades .indexHabilidadesRecursos div .iconSkills:hover ~ h4 {
+                opacity: 1;
+                transform: translateY(-8px); }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos .indexHabilidadesRecursosRow1 {
+          margin: 0px;
+          padding: 0px;
+          flex-direction: column; }
+        .gridIndex .indexHabilidades .indexHabilidadesRecursos .indexHabilidadesRecursosRow2 {
+          margin: 0px;
+          padding: 0px;
+          flex-direction: column; }
+    .gridIndex .indexSobreMi {
+      padding: 0px;
+      margin: 0px; }
+      .gridIndex .indexSobreMi .indexSobreMiTittle .indexSobreMiTittleMi img {
+        width: 60vw; }
+      .gridIndex .indexSobreMi .indexSobreMiRow {
+        display: grid;
+        align-content: center;
+        grid-template-columns: 90%;
+        grid-template-rows: auto auto 554px;
+        grid-template-areas: "indexSobreMiRowColFoto" "indexSobreMiRowColDesc" "indexSobreMiRowColExtras";
+        justify-content: center;
+        gap: 16px;
+        margin-top: 50px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColFoto {
+          grid-area: indexSobreMiRowColFoto;
+          display: flex;
+          flex-direction: column;
+          gap: 10px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColDesc {
+          grid-area: indexSobreMiRowColDesc;
+          max-width: 420px; }
+        .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras {
+          transform: scale(0.8);
+          grid-area: indexSobreMiRowColExtras;
+          display: flex;
+          max-width: fit-content;
+          flex-direction: column;
+          margin-top: 40px;
+          justify-content: center;
+          gap: 40px; }
+          .gridIndex .indexSobreMi .indexSobreMiRow .indexSobreMiRowColExtras .indexSobreMiRowColExtrasDiv {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 6px; }
+    .gridIndex .indexContacto {
+      margin: 0px;
+      padding: 0px; }
+      .gridIndex .indexContacto .indexContactoTittle {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center; }
+        .gridIndex .indexContacto .indexContactoTittle .indexContactoTittleContacto img {
+          width: 60vw; }
       .gridIndex .indexContacto .indexContactoForm .indexContactoContainer div img {
         display: none; } }
 
